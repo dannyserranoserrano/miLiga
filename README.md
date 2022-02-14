@@ -7,7 +7,7 @@
 
 
 
-<h3>Si desea visitar el proyecto, pulsa </h3><a href="https://miliga.netlify.app.">aqui</a>
+<h3>Si desea visitar el proyecto, pulsa <a href="https://miliga.netlify.app.">aqui</a></h3>
 
 Funcionalidades
 Acceso a todas las páginas oficiales de los clubes de LaLiga Santander, Premier League, League 1.
