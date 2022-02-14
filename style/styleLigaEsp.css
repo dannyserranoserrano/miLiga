@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+/* *****SPINNER***** */
+
+body {
+    background-color: rgb(56, 49, 49);
+}
+
+.container .titulo div h1{
+    color: white;
+    /* margin: 10px; */
+}
+
+.container .titulo {
+display: flex;
+justify-content: space-between;
+}
+
+div div table thead{
+    font-size: 18px;
+    color: rgb(56, 49, 49);}
+div div table thead th{
+    background-color:rgb(207, 211, 211) !important;
+}
+.navbar div .collapse{
+    background-color: rgb(151, 147, 147);
+}
+
+/******COLORES EN TABLA CLASIFICACION******/
+div table .body_table tr:nth-of-type(1)>td,
+div table .body_table tr:nth-of-type(2)>td,
+div table .body_table tr:nth-of-type(3)>td,
+div table .body_table tr:nth-of-type(4)>td {
+    background-color: blue !important;
+    }
+    div table .body_table tr:nth-of-type(5)>td {
+        background-color: brown !important;
+        }
+        div table .body_table tr:nth-of-type(6)>td {
+            background-color: green !important;
+            }
+        div table .body_table tr:nth-of-type(18)>td,
+        div table .body_table tr:nth-of-type(19)>td,
+        div table .body_table tr:nth-of-type(20)>td {
+            background-color:  red !important;
+            }  
+
+.logo{
+    width:200px;
+}
+
+.logo:hover {
+    transition:all .5s ease-in-out;
+   -webkit-transform:scale(0.6);transform:scale(0.6);
+}
+.table tbody .spinner{
+display: flex;
+justify-content: center;
+}
+
+.container .table tbody img{
+    width:40px;
+}
+.container .table tbody img:hover{
+    transition:all .5s ease-in-out;
+    -webkit-transform:scale(2);transform:scale(2);
+}
+
+.centro{
+    background-color: red;
+}
+
+table{
+    text-align: center;
+}
+ 
+ .container{
+    background-color: rgb(85, 75, 75);
+ }
+ .container .leyenda {
+     background-color: whitesmoke;
+     color: black;
+ }
+
+.nombreliga{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(151, 147, 147);
+    
+}
+ .nombreLiga .imageLiga img{
+     width: 100px;
+     border: 2px solid red;
+    }
+ .nombreLiga .textLiga p{
+    text-align: center;
+    color: white;
+    size: 40px;
+    
+}
