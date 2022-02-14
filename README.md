@@ -9,7 +9,7 @@
 
 <h3>Si desea visitar el proyecto, pulsa <a href="https://miliga.netlify.app.">aqui</a></h3>
 
-Funcionalidades
+<Funcionalidades</h2>
 Acceso a todas las páginas oficiales de los clubes de LaLiga Santander, Premier League, League 1.
 Acceso a la clasificación general de los equipos de LaLiga Santader, donde el usuario podrá visualizar en cualquier momento que puesto ocupa su equipo y si está en posición para acceder a las competiciónes europeas como Champions League, Europa League o si está en posición de descenso a la Liga SmartBank.
 Acceso a los resultados de todos los partidos de LaLiga Santander. El usuario puede filtrar los resultados en función del equipo que le interese, así como en función del resultado del mismo : ganados, empatados o perdidos.
