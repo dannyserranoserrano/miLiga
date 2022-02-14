@@ -33,7 +33,7 @@ function getFetch(url) {
 }
 // EJECUTAMOS LA FUNCION*****//
 getFetch("https://api.football-data.org/v2/competitions/2014/matches")
-document.getElementById("imgLiga").innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg">';
+document.getElementById("imgLiga").innerHTML = '<img src="https://assets.laliga.com/assets/public/logospage/laliga-h-16-9.jpg">';
 document.getElementById("textLiga").innerHTML = '<P>LA LIGA</p>';
 
 
@@ -42,7 +42,7 @@ let laLiga = document.getElementById("laLiga");
 laLiga.addEventListener("click", () => {
     const url = "https://api.football-data.org/v2/competitions/2014/matches"
     getFetch(url)
-    document.getElementById("imgLiga").innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg">';
+    document.getElementById("imgLiga").innerHTML = '<img src="https://assets.laliga.com/assets/public/logospage/laliga-h-16-9.jpg">';
     document.getElementById("textLiga").innerHTML = '<P>LA LIGA</p>';
 })
 
@@ -50,7 +50,7 @@ let premiereLeague = document.getElementById("premiereLeague");
 premiereLeague.addEventListener("click", () => {
     const url = "https://api.football-data.org/v2/competitions/2021/matches"
     getFetch(url)
-    document.getElementById("imgLiga").innerHTML = '<img src="https://crests.football-data.org/770.svg">';
+    document.getElementById("imgLiga").innerHTML = '<img src="https://i.pinimg.com/originals/ec/ef/1f/ecef1f081ae343f74cdc3570bdf9a432.jpg">';
     document.getElementById("textLiga").innerHTML = '<P>PREMIERE LIGUE</p>';
 })
 
@@ -58,7 +58,7 @@ let bundesliga = document.getElementById("bundesliga");
 bundesliga.addEventListener("click", () => {
     const url = "https://api.football-data.org/v2/competitions/2002/matches"
     getFetch(url)
-    document.getElementById("imgLiga").innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg">';
+    document.getElementById("imgLiga").innerHTML = '<img src="https://i0.wp.com/elpoderdelasideas.com/wp-content/uploads/bundesliga-detalles.png?w=329&h=329&crop=1&ssl=1">';
     document.getElementById("textLiga").innerHTML = '<P>BUNDESLIGA</p>';
 })
 
@@ -66,7 +66,7 @@ let ligue_1 = document.getElementById("ligue_1");
 ligue_1.addEventListener("click", () => {
     const url = "https://api.football-data.org/v2/competitions/2015/matches"
     getFetch(url)
-    document.getElementById("imgLiga").innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg">';
+    document.getElementById("imgLiga").innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Ligue1_Uber_Eats_logo.png">';
     document.getElementById("textLiga").innerHTML = '<P>LIGUE 1</p>';
 })
 
@@ -74,7 +74,7 @@ let serieA = document.getElementById("serieA");
 serieA.addEventListener("click", () => {
     const url = "https://api.football-data.org/v2/competitions/2019/matches"
     getFetch(url)
-    document.getElementById("imgLiga").innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg">';
+    document.getElementById("imgLiga").innerHTML = '<img src="https://www.soyfutbol.com/__export/1563281742077/sites/debate/img/2019/07/16/serie_a_italia.jpg_423682103.jpg">';
     document.getElementById("textLiga").innerHTML = '<P>SERIE A</p>';
 })
 
@@ -83,7 +83,7 @@ let primeiraLiga = document.getElementById("primeiraLiga");
 primeiraLiga.addEventListener("click", () => {
     const url = "https://api.football-data.org/v2/competitions/2017/matches"
     getFetch(url)
-    document.getElementById("imgLiga").innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg">';
+    document.getElementById("imgLiga").innerHTML = '<img src="https://img.vavel.com/liga-portugal-34695-6566660893.jpg">';
     document.getElementById("textLiga").innerHTML = '<P>PRIMEIRA LIGA</p>';
 })
 
@@ -91,7 +91,7 @@ let eredivisie = document.getElementById("eredivisie");
 eredivisie.addEventListener("click", () => {
     const url = "https://api.football-data.org/v2/competitions/2003/matches"
     getFetch(url)
-    document.getElementById("imgLiga").innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg">';
+    document.getElementById("imgLiga").innerHTML = '<img src="https://img.planetafobal.com/2017/05/eredivisie-new-logo-2017-2018-ds.jpg">';
     document.getElementById("textLiga").innerHTML = '<P>EREDIVISIE</p>';
 })
 
@@ -135,7 +135,7 @@ function statics1(match) {
                 homeTeamFound = x;
             }
         })
-        // *****SI NO ENCUENTRA ESAS KEYS, LAS AÑADE AL OBkETO***** //
+        // *****SI NO ENCUENTRA ESAS KEYS, LAS AÑADE AL OBJETO***** //
         if (homeTeamFound == undefined) {
             matchStatics.push({
                 id: homeId,

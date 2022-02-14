@@ -32,7 +32,7 @@ function getFetch(url) {
 }
 // EJECUTAMOS LA FUNCION*****//
 getFetch("https://api.football-data.org/v2/competitions/2014/standings")
-document.getElementById("imgLiga").innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg">';
+document.getElementById("imgLiga").innerHTML = '<img src="https://assets.laliga.com/assets/public/logospage/laliga-h-16-9.jpg">';
 document.getElementById("textLiga").innerHTML = '<P>LA LIGA</p>';
 
 

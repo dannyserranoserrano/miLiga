@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style/styleLigaEsp.css">
+    <link rel="stylesheet" href="/style/style.css">
     <link rel="icon" href="images/balon.png" type="img/png">
-    <title>Clasificación Liga Española</title>
+    <title>Información de los Equipos</title>
 </head>
 
 <body>
@@ -27,7 +27,6 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/home.html"><strong>Home</strong></a>
                     </li>
-
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,7 +39,6 @@
                             <li><a class="dropdown-item" href="estadisticas.html">Estadisticas</a></li>
                         </ul>
                     </li>
-
                 </ul>
                 <ul class="navbar navbar-nav mb-2 col mb-lg-0">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -49,8 +47,16 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><button class="dropdown-item" type="button" id="laLiga">La Liga España</button></li>
-                        <li><a class="dropdown-item" href="/clasificacion.html">Otras Ligas</a></li>
+                        <li><button class="dropdown-item" type="button" id="premiereLeague">Premiere League
+                                Inglaterra</button>
                         </li>
+                        <li><button class="dropdown-item" type="button" id="bundesliga">Bundesliga Alemania</button>
+                        </li>
+                        <li><button class="dropdown-item" type="button" id="ligue_1">Ligue 1 Francia</button></li>
+                        <li><button class="dropdown-item" type="button" id="serieA">Serie A Italia</button></li>
+                        <li><button class="dropdown-item" type="button" id="primeiraLiga">Primeira Liga Portugal
+                            </button></li>
+                        <li><button class="dropdown-item" type="button" id="eredivisie">Eredivisie Holanda</button></li>
                     </ul>
                 </ul>
             </div>
@@ -60,52 +66,28 @@
         <div class="imageLiga col-auto mt-2" id="imgLiga"></div>
         <div class="textLiga col-auto mt-4 fs-2 fw-bold" id="textLiga"></div>
     </div>
-    <div class="centro">
-        <!-- *****TABLA***** -->
-        <div class="container p-3">
-            <div class="titulo col-md-12 ">
-                <div class="col-md-3">
-                    <H1>Clasificación</H1>
-                </div>
-                <div class="textError col-md-3 mt-3" id="error">
-                </div>
-            </div>
-            <div class="table-responsive">
-                <div class=" justify-content-center">
-                    <table class="table table-sm table-dark table-hover border border-light ">
-                        <thead class="thead theme" id="head_table">
-                            <th></th>
-                            <th>Equipo</th>
-                            <th>Posición</th>
-                            <th>Puntos</th>
-                            <th>P. Ganados</th>
-                            <th>P. Empatados</th>
-                            <th>P. Perdidos</th>
-                            <th>G. Favor</th>
-                            <th>G. Contra</th>
-                            <th>Dif. Goles</th>
-                        </thead>
-                        <tbody class="body_table" id="body_table">
-                            <div class="m-0 row justify-content-center">
-                                <div class=" spinner spinner-border text-secondary spinner-border-sm col-auto m-5"
-                                    style="width: 5rem; height:5rem" role="status" id="spinner">
-                                </div>
-                            </div>
-                            <div class="m-0 row justify-content-center">
-                                <div class="alert alert-primary col-auto" role="alert" id="alert5">
-                                    AVISO!!! SE HA PRODUCIDO UN ERROR AL CARGAR LA PÁGINA
-                                </div>
-                        </tbody>
-                    </table>
+
+
+    <div class="centro" id="centro">
+        <!-- ***** CABEZA DE TABLA***** -->
+        <div class="container p-4">
+            <div class="titulo col-lg">
+                <div class="col-md-6">
+                    <h1>Información de los equipos</h1>
                 </div>
             </div>
-            <div class="leyenda border border-light mb-3">
-                <h6>&#128998; Champions League &#129000; Europa League &#129003; UEFA Conference League &#128997;
-                    Descenso
-                    </h1>
+            <div class="m-0 row justify-content-center">
+                <div class="alert alert-primary col-auto" role="alert" id="alert5">
+                    AVISO!!! SE HA PRODUCIDO UN ERROR AL CARGAR LA PÁGINA
+                </div>
+            </div>
+            <div class="equipos">
+
             </div>
         </div>
+
     </div>
+
     <!-- *****FOOTER***** -->
     <footer class="footer d-flex justify-content-center navbar navbar-expand-lg navbar-light bg-light">
         <ul class=" nav justify-content-evenly">
@@ -120,11 +102,10 @@
             </li>
         </ul>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
-    <script src="/js/tabla_clasLigaEsp.js"></script>
+    <script src="/js/tabla_equipos.js"></script>
 </body>
 
 </html>
