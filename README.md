@@ -26,30 +26,29 @@
 <h4>Git y GitHub:</h4> <P>Con ello trabajamos para la carga de los archivos componentes de la web a la nube.</p>
 </br>
 </br>
-<h4>Descripción técnica:</h4>
-<h3>En este proyecto utilizamos diversas funcionalidades agrupadas en dos tipos: Genéricas y Específicas, estas funcionalidades son las que utilizaremos  mediante Javascript.</h3>
+<h3>Descripción técnica:</h3>
+<h4>En este proyecto utilizamos diversas funcionalidades agrupadas en dos tipos: Genéricas y Específicas, estas funcionalidades son las que utilizaremos  mediante Javascript.</h4>
 
-<h4>Aqui tenemos algunas funcionalidades Genéricas: getFetch(),  matchTable(), spinnerOut().</h4>
+<h5>Aqui tenemos algunas funcionalidades Genéricas: getFetch(),  matchTable(), spinnerOut().</h5>
 
-<p>*getFetch(): Esta función es la encargada de recoger los datos desde la web proveedora de la información sin utilizar Postman y en estado dinámico, es decir actualizado constantemente.</p>
-<p>*matchTable(): Ésta es la función encargada de crear las diferentes tablas que mostraremos en nuestro sitio web. Será ejecutada cuando, bien por carga de página con datos generales, o bien tras la eleccion mediante los diferentes inputs, elegimos que datos mostrar, tales como partidos ganados, perdidos o empatados, o tras seleccionar otras de las diferentes ligas con las que contamos para mostrar.</p>
-<p>*spinnerOut(): Ésta es la llamada que utilizaremos tras cargar las diferentes tablas, para ocultar de pantalla el spinner que mostramos mientras se cargan las diferentes páginas de información mediante tablas.</p>
+<h6>-getFetch():</h6> <p>Esta función es la encargada de recoger los datos desde la web proveedora de la información sin utilizar Postman y en estado dinámico, es decir actualizado constantemente.</p>
+<h6>-matchTable():</h6> <p>Ésta es la función encargada de crear las diferentes tablas que mostraremos en nuestro sitio web. Será ejecutada cuando, bien por carga de página con datos generales, o bien tras la eleccion mediante los diferentes inputs, elegimos que datos mostrar, tales como partidos ganados, perdidos o empatados, o tras seleccionar otras de las diferentes ligas con las que contamos para mostrar.</p>
+<h6>-spinnerOut():</h6> <p>Ésta es la llamada que utilizaremos tras cargar las diferentes tablas, para ocultar de pantalla el spinner que mostramos mientras se cargan las diferentes páginas de información mediante tablas.</p>
 </br>
 </br>
-<h4>Aqui mostramos las funcionalidades algunas de las funcionalidades específicas:
+<h5>Aqui mostramos las funcionalidades algunas de las funcionalidades específicas:</h5>
 
-<p>*limpiarTabla(): Con esta función, limpiamos el body de nuestra tabla para poder mostrar nueva información solicitada mediante nuestros inputs.
-<p>filtrarEquipos(): Con ella, filtramos de nuestras arrays los equipos que cumplan las condiciones establecidas, para tras ello crear una nueva array con la que creremos nuestras tablas.
-<p>filtrarJornada(): Misma función que la anterior, pero en este caso la utilizaremos para crear arrays por jornada introducida.</p>
+<h6>-limpiarTabla():</h6> <p>Con esta función, limpiamos el body de nuestra tabla para poder mostrar nueva información solicitada mediante nuestros inputs.
+<h6>-filtrarEquipos():</h6> <p>Con ella, filtramos de nuestras arrays los equipos que cumplan las condiciones establecidas, para tras ello crear una nueva array con la que creremos nuestras tablas.
+<h6>-filtrarJornada():</h6> <p>Misma función que la anterior, pero en este caso la utilizaremos para crear arrays por jornada introducida.</p>
+<h6>-staticsTable() y statics():</h6> <p>Funciones con las que filtramos y creamos las tablas de estadisticas del Top 5 equipos con mejor promedio goleador.</p>
 
-<p>*staticsTable() y statics(): Funciones con las que filtramos y creamos las tablas de estadisticas del Top 5 equipos con mejor promedio goleador.</p>
-
-<p>*staticsTable2() y statics2(): Funciones con las que filtramos y creamos las tablas de estadisticas del Top 5 equipos menos golados fuera de casa.</p>
+<h6>-staticsTable2() y statics2():</h6> <p>Funciones con las que filtramos y creamos las tablas de estadisticas del Top 5 equipos menos golados fuera de casa.</p>
 
 <h3>Versiones</h3>
-<p>*v1.0 (16.02.2022): Presentación proyecto.</p>
+<h4>-v1.0 (16.02.2022):</h4> <p>Presentación proyecto.</p>
 
 <h3>TO-DO</h3>
-<p>Mejora de diseño</p>
-<P>Añadir nuevas opciones de búsqueda para facilitar al usuario así como dar mas información, o de una manera mas práctica</p>
-<p>Añadir secciones de noticis deportivas actualizadas</p>
+<p>-Mejora de diseño</p>
+<P>-Añadir nuevas opciones de búsqueda para facilitar al usuario así como dar mas información, o de una manera mas práctica</p>
+<p>-Añadir secciones de noticis deportivas actualizadas</p>
