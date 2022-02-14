@@ -1,14 +1,13 @@
 
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cb42918c-7c9c-4528-98cc-b2e44661d6a4/deploy-status)](https://app.netlify.com/sites/miliga/deploys)
 <h1>Descripción de miLiga.com Web</h1>
-<h2>miLiga.com</h2>
-<p>WebV1.0. Este proyecto trata sobre un sitio web donde el usuario puede consultar datos actualizados tanto de la clasificación, resultados, proximos partidos y estadisticas, en la liga española y otras ligas.</p>
+<h2>miLiga.com</h2> <p>WebV1.0. Este proyecto trata sobre un sitio web donde el usuario puede consultar datos actualizados tanto de la clasificación, resultados, proximos partidos y estadisticas, en la liga española y otras ligas.</p>
 
 <p>Mediante unos menús de fácil comprensión, el usuario podrá consultar dichos datos, contando con filtros por equipos, jornadas y resultados para hacer una busqueda agradable.</p>
 
 
 
-<h3>Si desea visitar el proyecto, pulsa </h3><a href="https://miliga.com.netlify.app.">aqui</a>
+<h3>Si desea visitar el proyecto, pulsa </h3><a href="https://miliga.netlify.app.">aqui</a>
 
 Funcionalidades
 Acceso a todas las páginas oficiales de los clubes de LaLiga Santander, Premier League, League 1.
