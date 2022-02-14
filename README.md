@@ -1,14 +1,14 @@
 
 
-# Descripción de miLiga.com Web
-## miLiga.com. 
-### WebV1.0 consiste en un proyecto mediante cual el usuario puede acceder a la clasificación, a los resultados y las estadisticas de la Liga Española ⚽ .
+<h1>Descripción de miLiga.com Web</h1>
+<h2>miLiga.com</h2>
+<p>WebV1.0. Este proyecto trata sobre un sitio web donde el usuario puede consultar datos actualizados tanto de la clasificación, resultados, proximos partidos y estadisticas, en la liga española y otras ligas.</p>
 
-Facilita al usuario el acceso a las páginas web de los distintos equipos que conforman esta competición y una visualización rápida 👀 de las últimas noticias que LaLiga publica en su cuenta de Facebook.
+<p>Mediante unos menús de fácil comprensión, el usuario podrá consultar dichos datos, contando con filtros por equipos, jornadas y resultados para hacer una busqueda agradable.</p>
 
-Para que el usuario disfrute aún más se añadieron los clubes de la Premier League (Liga Inglesa) y los clubes de la League 1 (Liga Francesa) , accediendo así a la web de cada equipo y poder estar al tanto de las ultimas noticias de los clubes más conocidos del mundo.
 
-Para visualizar el proyecto, pulsa aquí
+
+<h3>Si desea visitar el proyecto, pulsa </h3><a href="https://miliga.com.netlify.app.">aqui</a>
 
 Funcionalidades
 Acceso a todas las páginas oficiales de los clubes de LaLiga Santander, Premier League, League 1.
