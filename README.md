@@ -10,53 +10,46 @@
 <h3>Si desea visitar el proyecto, pulsa <a href="https://miliga.com.netlify.app.">aqui</a></h3>
 
 <h3>Funcionalidades</h3>
-<p>-Visualización de la clasificación general de los equipos de la Primera división Española, donde el usuario podrá obtener la posición de su equipo así como los clasificados para las próximas competiciones europeas como son la Champions League, Europa League, UEFA Conference League, y los equipos en posición de descenso.</p> 
-<p>-Visualización de todos los resultados de la Liga nacional, tanto los jugados como los que quedan por jugar. Además dispondrá de una función de fitrado por Partidos ganados, empatados y perdidos del equipo seleccionado, así como los proximos partidos a jugar. En dicha información observará tanto el numero de jornada, fecha y hora del encuentro, nombre y escudo de los equipos enfrentados y resultado obtenido.</p>
-<p>-Visualización tanto del top 5 equipos con mejor promedio goleador, como del top 5 equipos menos goleados fuera de casa.</p>
+<p>*Visualización de la clasificación general de los equipos de la Primera división Española, donde el usuario podrá obtener la posición de su equipo así como los clasificados para las próximas competiciones europeas como son la Champions League, Europa League, UEFA Conference League, y los equipos en posición de descenso.</p> 
+<p>*Visualización de todos los resultados de la Liga nacional, tanto los jugados como los que quedan por jugar. Además dispondrá de una función de fitrado por Partidos ganados, empatados y perdidos del equipo seleccionado, así como los proximos partidos a jugar. En dicha información observará tanto el numero de jornada, fecha y hora del encuentro, nombre y escudo de los equipos enfrentados y resultado obtenido.</p>
+<p>*Visualización tanto del top 5 equipos con mejor promedio goleador, como del top 5 equipos menos goleados fuera de casa.</p>
+<p>*Todos estos datos, no solo podemos mostrarlos de la liga española, sino que tambien disponemos de un desplegable con enlaces a otra ligas europeas, a las cuales se les aplicará los mismos filtros que a la liga principal</p>
 
-<h3>Tecnologías empleadas</h3>
+<h3>Tecnologías  y leguajes empleados</h3>
 <img src="/images/mix.jpg" alt="Tecnologias">
 
-<h4>HTML5 : <p>para hacer el esqueleto de la página web</p></h4>
-<h4>CSS3 : <p>para el diseño de la interfaz</p></h4>
-<h4>Bootstrap : </p>para el diseño de la interfaz y al mismo tiempo creando una web responsive capaz de adaptarse y que pueda ser accesible desde cualquier dispositivo: tablets, smartphone, pc, etc..</p></h4>
-<h4>JavaScript : <p>para dar mejor rendimiento y dinamismo al sitio web y al mismo tiempo darle funcionalidad</p></h4>
-<h4>Postman : para coger la información y los datos que se muestran en la web (utilizada inicialmente, hasta que se hizo el fetch directamente en los archivos JS)</p></h4>
-<h4>Git y GitHub : <P>control de versiones y repositorio en remoto para trabajar en distintas branches</p></h4>
-<h4>AlertifyJS : <p>librería de JavaScript con la que se modificaron las alertas que se muestran al usuario.</p></h4>
-<h4>Descripción técnica
-<p>Se han usado dos tipos de funciónalidades : genéricas y específicas.</p></h4>
+<h4>HTML5:</h4> <p>Utilizado para  montar el esqueleto de la web.</p>
+<h4>CSS3:</h4> <p>Utilizado para dar pequeños ajustes en el diseño de la web.</p>
+<h4>Bootstrap:</h4> </p>Utilizado en el grueso de la web para la realización del diseño y ajustes responsive.</p>
+<h4>JavaScript:</h4> <p>Con el realizamos toda la parte dinamica y lógica de la web</p>
+<h4>Postman:</h4> <p>Utilizada en un princiìo para recoger los datos a utilizar en la gestion de las tablas. Mas tarde se configuró con datos en linea mediante Fetch</p>
+<h4>Git y GitHub:</h4> <P>Con ello trabajamos para la carga de los archivos componentes de la web a la nube.</p>
+</br>
+</br>
+<h4>Descripción técnica:</h4>
+<h3>En este proyecto utilizamos diversas funcionalidades agrupadas en dos tipos: Genéricas y Específicas, estas funcionalidades son las que utilizaremos  mediante Javascript.</h3>
 
-Como funcionalidades genéricas podemos encontrar las siguientes funciones: getFetch(),crearTabla(), quitarSpinner(), crearTablaClasificacion()
+<h4>Aqui tenemos algunas funcionalidades Genéricas: getFetch(),  matchTable(), spinnerOut().</h4>
 
-getFetch() usada en todos los archivos JS, es la función encargada de coger los datos en tiempo real de la API, sin necesidad de usar el POSTMAN.
-crearTabla() es la función encargada de crear la tabla con los equipos, cada vez que queremos filtrarlos por nombre del equipo, o bien los resultados: ganados, empatados, perdidos o próximos partidos. Interviene cada vez que es accionado alguno de los botones del filtro, pasándole un parámetro ú otro. Esta función se podría volver a usar si queremos hacer lo mismo con los equipos de las otras ligas, arriba mencionadas.
-quitarSpinner() usada en todos los archivos JS, en los cual se cogen datos con la API. Su función es de "parar/ocultar" el spinner después de recibir la respuesta de la API
-crearTablaClasifiacion() encargada de crear la tabla de clasifiacion de los equipos de LaLiga Santander, recogiendo datos como: posicion, nombre del equipo, partidos jugados, partidos ganados, empatados o perdidos, goles marcados, goles recibidos, diferencia de goles y puntos totales. Se podría volver a usar para hacer la tabla de clasifiación de las otras ligas.
-Como funcionalidades especificas podemos encontrar las siguiente funciónes :
+<p>*getFetch(): Esta función es la encargada de recoger los datos desde la web proveedora de la información sin utilizar Postman y en estado dinámico, es decir actualizado constantemente.</p>
+<p>*matchTable(): Ésta es la función encargada de crear las diferentes tablas que mostraremos en nuestro sitio web. Será ejecutada cuando, bien por carga de página con datos generales, o bien tras la eleccion mediante los diferentes inputs, elegimos que datos mostrar, tales como partidos ganados, perdidos o empatados, o tras seleccionar otras de las diferentes ligas con las que contamos para mostrar.</p>
+<p>*spinnerOut(): Ésta es la llamada que utilizaremos tras cargar las diferentes tablas, para ocultar de pantalla el spinner que mostramos mientras se cargan las diferentes páginas de información mediante tablas.</p>
+</br>
+</br>
+<h4>Aqui mostramos las funcionalidades algunas de las funcionalidades específicas:
 
-limpiarTabla() función usada para limpiar el body de la tabla, cada vez que realizamos una búsqueda nueva, de esta manera solo nos aparecen los nuevos resultados. Sin esta función se añadirían filas a la tabla y para poder encontrar los resultados de nuestra búsqueda tendríamos que hacer scroll hasta el final de la tabla.
+<p>*limpiarTabla(): Con esta función, limpiamos el body de nuestra tabla para poder mostrar nueva información solicitada mediante nuestros inputs.
+<p>filtrarEquipos(): Con ella, filtramos de nuestras arrays los equipos que cumplan las condiciones establecidas, para tras ello crear una nueva array con la que creremos nuestras tablas.
+<p>filtrarJornada(): Misma función que la anterior, pero en este caso la utilizaremos para crear arrays por jornada introducida.</p>
 
-filtrarNombreEquipo() esta función tiene 2 tareas :
+<p>*staticsTable() y statics(): Funciones con las que filtramos y creamos las tablas de estadisticas del Top 5 equipos con mejor promedio goleador.</p>
 
-- filtrar los equipos por nombre con los datos introducidos por el usuario
-- volver hacer otro filtro de la nueva array creada con los nombres del equipo en función de su resultado
-resetearFiltro() usada para resetear todos los filtros, limpiando el campo donde el usuario introduce el nombre de su equipo. Esta función se usa también en el caso de que algúna de las condiciónes no se cumplen y al usuario le salta alguna alerta.
+<p>*staticsTable2() y statics2(): Funciones con las que filtramos y creamos las tablas de estadisticas del Top 5 equipos menos golados fuera de casa.</p>
 
-crearEstadisticas() y top5mejoresAvgGoles() son las 2 funciónes encargadas de crear la tabla y filtrar los 5 equipos con mayor media de goles a favor por partido.
+<h3>Versiones</h3>
+<p>*v1.0 (16.02.2022): Presentación proyecto.</p>
 
-calcularEstadisticas2() y top5menosGvisitante() las funciónes encargadas de crear la tabla y filtrar los 5 equipos con menos goles en contra como visitante.
-
-crearEquipos() es encargada de recorrer el array de los equipos y añadir las imagenes de los clubes junto con su nombre y poder acceder directamente a la web oficial de cada club.
-
-Versiones
-v1.0 (26.05.2021) - Presentación proyecto
-
-v1.1 (28.05.2021)
-
-Resultados y filtros de la League1 y Premier League
-Estadisticas con top 5equipos con mayor media de goles a favor por partido y los 5 equipos con menos goles en contra como visitante de los equipos de la League 1 y Premier League
-TO-DO
-Mejora de diseño
-Clasificación League1 y Premier League
-Filtrar resultados por fechas
+<h3>TO-DO</h3>
+<p>Mejora de diseño</p>
+<P>Añadir nuevas opciones de búsqueda para facilitar al usuario así como dar mas información, o de una manera mas práctica</p>
+<p>Añadir secciones de noticis deportivas actualizadas</p>
