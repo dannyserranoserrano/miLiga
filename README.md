@@ -8,21 +8,17 @@
 
 
 
-<h3>Si desea visitar el proyecto, pulsa </h3><a href="https://miliga.com.netlify.app.">aqui</a>
+<h3>Si desea visitar el proyecto, pulsa <a href="https://miliga.com.netlify.app.">aqui</a></h3>
 
-Funcionalidades
-Acceso a todas las páginas oficiales de los clubes de LaLiga Santander, Premier League, League 1.
-Acceso a la clasificación general de los equipos de LaLiga Santader, donde el usuario podrá visualizar en cualquier momento que puesto ocupa su equipo y si está en posición para acceder a las competiciónes europeas como Champions League, Europa League o si está en posición de descenso a la Liga SmartBank.
-Acceso a los resultados de todos los partidos de LaLiga Santander. El usuario puede filtrar los resultados en función del equipo que le interese, así como en función del resultado del mismo : ganados, empatados o perdidos.
-Acceso a unas tablas de estadísticas de golaveraje. El usuario puede ver top 5 equipos con mayor media de goles a favor por partido o top 5 equipos con menos goles en contra como visitante.
-Acceso al feed del Facebook de la cuenta oficial de LaLiga Santander.
-Caso de uso
+<h3>Funcionalidades</h3>
+<p>-Visualización de la clasificación general de los equipos de la Primera división Española, donde el usuario podrá obtener la posición de su equipo así como los clasificados para las próximas competiciones europeas como son la Champions League, Europa League, UEFA Conference League, y los equipos en posición de descenso.</p> 
+<p>-Visualización de todos los resultados de la Liga nacional, tanto los jugados como los que quedan por jugar. Además dispondrá de una función de fitrado por Partidos ganados, empatados y perdidos del equipo seleccionado, así como los proximos partidos a jugar. En dicha información observará tanto el numero de jornada, fecha y hora del encuentro, nombre y escudo de los equipos enfrentados y resultado obtenido.</p>
+<p>-Visualización tanto del top 5 equipos con mejor promedio goleador, como del top 5 equipos menos goleados fuera de casa.</p>
 
+<h3>Tecnologías empleadas</h3>
+<img src="/images/mix.jpg" alt="Tecnologias">
 
-Tecnologías empleadas
-tecnologias
-
-HTML5 : para hacer el esqueleto de la página web
+<h4>HTML5 : <p>para hacer el esqueleto de la página web</p></h4>
 CSS3 : para el diseño de la interfaz
 Bootstrap : para el diseño de la interfaz y al mismo tiempo creando una web responsive capaz de adaptarse y que pueda ser accesible desde cualquier dispositivo: tablets, smartphone, pc, etc..
 JavaScript : para dar mejor rendimiento y dinamismo al sitio web y al mismo tiempo darle funcionalidad
