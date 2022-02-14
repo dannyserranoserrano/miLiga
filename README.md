@@ -31,9 +31,9 @@
 <h4>Aqui mostramos algunas de las funcionalidades específicas:</h4>
 <h5>-limpiarTabla():</h5> <p>Con esta función, limpiamos el body de nuestra tabla para poder mostrar nueva información solicitada mediante nuestros inputs.
 <h5>-filtrarEquipos():</h5> <p>Con ella, filtramos de nuestras arrays los equipos que cumplan las condiciones establecidas, para tras ello crear una nueva array con la que creremos nuestras tablas.
-<5>-filtrarJornada():</5> <p>Misma función que la anterior, pero en este caso la utilizaremos para crear arrays por jornada introducida.</p>
-<5>-staticsTable() y statics():</5> <p>Funciones con las que filtramos y creamos las tablas de estadisticas del Top 5 equipos con mejor promedio goleador.</p>
-<5>-staticsTable2() y statics2():</5> <p>Funciones con las que filtramos y creamos las tablas de estadisticas del Top 5 equipos menos golados fuera de casa.</p>
+<h5>-filtrarJornada():</h5> <p>Misma función que la anterior, pero en este caso la utilizaremos para crear arrays por jornada introducida.</p>
+<h5>-staticsTable() y statics():</h5> <p>Funciones con las que filtramos y creamos las tablas de estadisticas del Top 5 equipos con mejor promedio goleador.</p>
+<h5>-staticsTable2() y statics2():</h5> <p>Funciones con las que filtramos y creamos las tablas de estadisticas del Top 5 equipos menos golados fuera de casa.</p>
 <h3>Versiones</h3>
 <h4>-v1.0 (16.02.2022):</h4> <p>Presentación proyecto.</p>
 <h3>TO-DO</h3>
