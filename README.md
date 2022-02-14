@@ -1,8 +1,7 @@
 
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cb42918c-7c9c-4528-98cc-b2e44661d6a4/deploy-status)](https://app.netlify.com/sites/miliga/deploys)
 <h1>Descripción de miLiga.com Web</h1>
-<h2>miLiga.com</h2>
-<p>WebV1.0. Este proyecto trata sobre un sitio web donde el usuario puede consultar datos actualizados tanto de la clasificación, resultados, proximos partidos y estadisticas, en la liga española y otras ligas.</p>
+<h2>miLiga.com</h2> <p>WebV1.0. Este proyecto trata sobre un sitio web donde el usuario puede consultar datos actualizados tanto de la clasificación, resultados, proximos partidos y estadisticas, en la liga española y otras ligas.</p>
 
 <p>Mediante unos menús de fácil comprensión, el usuario podrá consultar dichos datos, contando con filtros por equipos, jornadas y resultados para hacer una busqueda agradable.</p>
 
@@ -19,14 +18,14 @@
 <img src="/images/mix.jpg" alt="Tecnologias">
 
 <h4>HTML5 : <p>para hacer el esqueleto de la página web</p></h4>
-CSS3 : para el diseño de la interfaz
-Bootstrap : para el diseño de la interfaz y al mismo tiempo creando una web responsive capaz de adaptarse y que pueda ser accesible desde cualquier dispositivo: tablets, smartphone, pc, etc..
-JavaScript : para dar mejor rendimiento y dinamismo al sitio web y al mismo tiempo darle funcionalidad
-Postman : para coger la información y los datos que se muestran en la web (utilizada inicialmente, hasta que se hizo el fetch directamente en los archivos JS)
-Git y GitHub : control de versiones y repositorio en remoto para trabajar en distintas branches
-AlertifyJS : librería de JavaScript con la que se modificaron las alertas que se muestran al usuario.
-Descripción técnica
-Se han usado dos tipos de funciónalidades : genéricas y específicas.
+<h4>CSS3 : <p>para el diseño de la interfaz</p></h4>
+<h4>Bootstrap : </p>para el diseño de la interfaz y al mismo tiempo creando una web responsive capaz de adaptarse y que pueda ser accesible desde cualquier dispositivo: tablets, smartphone, pc, etc..</p></h4>
+<h4>JavaScript : <p>para dar mejor rendimiento y dinamismo al sitio web y al mismo tiempo darle funcionalidad</p></h4>
+<h4>Postman : para coger la información y los datos que se muestran en la web (utilizada inicialmente, hasta que se hizo el fetch directamente en los archivos JS)</p></h4>
+<h4>Git y GitHub : <P>control de versiones y repositorio en remoto para trabajar en distintas branches</p></h4>
+<h4>AlertifyJS : <p>librería de JavaScript con la que se modificaron las alertas que se muestran al usuario.</p></h4>
+<h4>Descripción técnica
+<p>Se han usado dos tipos de funciónalidades : genéricas y específicas.</p></h4>
 
 Como funcionalidades genéricas podemos encontrar las siguientes funciones: getFetch(),crearTabla(), quitarSpinner(), crearTablaClasificacion()
 
