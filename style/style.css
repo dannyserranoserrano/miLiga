@@ -1,121 +1,219 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
+
 /* *****SPINNER***** */
-#load{
-    width:100%;
-    height:100%;
-    position:fixed;
-    z-index:9999;
-    background: no-repeat center center rgba(0,0,0,0.25)
+#load {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9999;
+    background: no-repeat center center rgba(0, 0, 0, 0.25)
 }
 
 body {
     background-color: rgb(56, 49, 49);
 }
 
-.container .titulo div h1{
+.container .titulo div h1, 
+.container .titulo div h2 {
     color: white;
-    /* margin: 10px; */
 }
 
 .container .titulo {
-display: flex;
-justify-content: space-between;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
 }
 
-div div table thead{
+div div table thead {
     font-size: 18px;
-    color: rgb(56, 49, 49);}
-div div table thead th{
-    background-color:rgb(207, 211, 211) !important;
+    color: rgb(56, 49, 49);
 }
-.navbar div .collapse{
+
+div div table thead th {
+    background-color: rgb(207, 211, 211) !important;
+}
+
+.navbar div .collapse {
     background-color: rgb(151, 147, 147);
 }
 
 
-.logo{
-    width:200px;
+.logo {
+    width: 200px;
 }
 
 .logo:hover {
-    transition:all .5s ease-in-out;
-   -webkit-transform:scale(0.6);transform:scale(0.6);
+    transition: all .5s ease-in-out;
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
 }
-.table tbody .spinner{
-display: flex;
-justify-content: center;
+
+.table tbody .spinner {
+    display: flex;
+    justify-content: center;
 }
-.center .container div tbody .alert{
+
+.center .container div tbody .alert {
     text-align: center;
 }
 
 .container .table tbody img,
 .container .table1 tbody img,
-    .container .table2 tbody img{
-    width:40px;
+.container .table2 tbody img {
+    width: 40px;
 }
+
 .container .table tbody img:hover,
 .container .table1 tbody img:hover,
-.container .table2 tbody img:hover{
-    transition:all .5s ease-in-out;
-    -webkit-transform:scale(2);transform:scale(2);
+.container .table2 tbody img:hover {
+    transition: all .5s ease-in-out;
+    -webkit-transform: scale(2);
+    transform: scale(2);
 }
 
 
-.centro .table1{
-max-width: 600px;
+.centro .table1 {
+    max-width: 600px;
 }
 
-.centro .table2{
+.centro .table2 {
     max-width: 400px;
 
 }
-/* *****HOME*****/
-.centro{
+
+
+.centro .body .divTeams {
+    border: 2px solid white;
+    /* padding: 5px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1%;
+    align-items: center;
+    background-color: red;
+    
+}
+
+.centro .body .divTeams .groupTeam {
+    border: 2px solid white;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: black;
+    width: 200px;
+    height: 210px;
+    
+
+
+}
+
+.centro .body .divTeams .groupTeam:hover {
+    transition: all .5s ease-in-out;
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+    z-index: 5;
+}
+
+
+
+.centro .body .divTeams .groupTeam .parameters img {
+    max-height: 50px;
+    display: flex;
+}
+
+.centro .body .divTeams .groupTeam .parameters img:hover {
+    transition: all .5s ease-in-out;
+    -webkit-transform: scale(2.3);
+    transform: scale(2.3);
+}
+ 
+.centro .body .divTeams .groupTeam .parameters .titulTeam {
+    text-decoration: none;
+    font-size: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.centro .body .divTeams .groupTeam .parameters .titulTeam:hover {
+    transition: all .5s ease-in-out;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+.centro .body .divTeams .groupTeam .parameters .enlaces {
+    text-decoration: none;
+    font-size: 70%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.centro .body .divTeams .groupTeam .parameters .textos {
+    font-size: 70%;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.centro {
     background-color: red;
 }
-.container2 .centro .centro .card img:hover{
+
+.container2 .centro .centro .card img:hover {
     filter: opacity(.5);
 }
 
-/* .carousel .carousel-inner div img {
-    height: 450px;
-} */
-.centro .card{
+.centro .card {
     max-width: 300px;
     margin: 10px;
-    }
-table{
+}
+
+table {
     text-align: center;
 }
- .container2{
-    background-color: red;
- }
- .container{
-    background-color: rgb(85, 75, 75);
- }
- .container .leyenda {
-     background-color: whitesmoke;
-     color: black;
- }
 
-.nombreliga{
+.container2 {
+    background-color: red;
+}
+
+.container {
+    background-color: rgb(85, 75, 75);
+}
+
+.container .leyenda {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.nombreliga {
     display: flex;
     justify-content: center;
-    background-color: rgb(151, 147, 147);
 }
- .nombreLiga .imageLiga img{
-     width: 100px;
-     border: 2px solid red;
-    }
- .nombreLiga .textLiga p{
-   
+
+.nombreLiga .imageLiga img {
+    width: 100px;
+    border: 2px solid red;
+    background-color: white;
+}
+
+.nombreLiga .textLiga p {
+
     text-align: center;
     color: white;
     size: 40px;
+}
+body div .navbar div .navbar .m-1 .btn{
+    height: 100%;
 }

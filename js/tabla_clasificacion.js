@@ -105,7 +105,7 @@ function getFetch(url) {
 }
 // EJECUTAMOS LA FUNCION*****//
 getFetch("https://api.football-data.org/v2/competitions/2021/standings")
-document.getElementById("imgLiga").innerHTML = '<img src="https://crests.football-data.org/770.svg">';
+document.getElementById("imgLiga").innerHTML = '<img src="https://i.pinimg.com/originals/ec/ef/1f/ecef1f081ae343f74cdc3570bdf9a432.jpg">';
 document.getElementById("textLiga").innerHTML = '<P>PREMIERE LIGUE</p>';
 
 // *****CREAMOS LAS DIFERENTES LIGAS***** //
@@ -155,7 +155,7 @@ let eredivisie = document.getElementById("eredivisie");
 eredivisie.addEventListener("click", () => {
     const url = "https://api.football-data.org/v2/competitions/2003/standings"
     getFetch(url)
-    document.getElementById("imgLiga").innerHTML = '<img src="https://img.planetafobal.com/2017/05/eredivisie-new-logo-2017-2018-ds.jpg">';
+    document.getElementById("imgLiga").innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eredivisie_nieuw_logo_2017-.svg/375px-Eredivisie_nieuw_logo_2017-.svg.png">';
     document.getElementById("textLiga").innerHTML = '<P>EREDIVISIE</p>';
 })
 

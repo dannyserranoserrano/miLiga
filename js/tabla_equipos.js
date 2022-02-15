@@ -15,18 +15,18 @@ function getFetch(url) {
         let teams = data3.teams
         // console.log(data3)
         // ¡¡¡¡¡*****AQUI INSERTAMOS TODOS LOS BOTONES SI LOS TUVIESEMOS *****!!!!! //
-        
+
         // *****QUITAMOS ALERTAS Y EJECUTAMOS LA FUNCIÓN***** //
-        
+
         quitarAlert5();
-        // teams(teams)
+        teamsTable(teams)
         console.log(teams)
 
 
         // *****SI HAY UN ERROR AL CARGAR LA PÁGINA LO AVISAMOS***** //
-    }).catch(error => {
-        alert5()
-        console.log("Alerta Fallo al cargar");
+        // }).catch(error => {
+        //     alert5()
+        //     console.log("Alerta Fallo al cargar");
     })
 }
 // EJECUTAMOS LA FUNCION*****//
@@ -89,17 +89,82 @@ let eredivisie = document.getElementById("eredivisie");
 eredivisie.addEventListener("click", () => {
     const url = "https://api.football-data.org/v2/competitions/2003/teams"
     getFetch(url)
-    document.getElementById("imgLiga").innerHTML = '<img src="https://img.planetafobal.com/2017/05/eredivisie-new-logo-2017-2018-ds.jpg">';
+    document.getElementById("imgLiga").innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eredivisie_nieuw_logo_2017-.svg/375px-Eredivisie_nieuw_logo_2017-.svg.png">';
     document.getElementById("textLiga").innerHTML = '<P>EREDIVISIE</p>';
 })
 
 // ******CREAMOS LA FUNCION teamsDates***** //
-function teams(teams) {
-    let teamsDates = []
-    for (let i = 0; i < teams.length; i++) {
+function teamsTable(teamsSearch) {
 
+    let divTeams = document.getElementById("divTeams")
+    limpiarTabla()
+    for (let i = 0; i < teamsSearch.length; i++) {
 
+        const divTable = document.createElement("div");
+        divTable.setAttribute("href", teamsSearch[i].website);
+        divTable.classList.add("groupTeam");
+        divTable.classList.add("card");
+        divTable.classList.add("card-body");
+        divTable.classList.add("p-1");
+
+        let crest = document.createElement("img");
+        crest.setAttribute("src", "https://crests.football-data.org/" + teamsSearch[i].id + ".svg");
+        crest.classList.add("crestImage");
+        crest.classList.add("card-img-top");
+        // console.log(crest);
+
+        let link = document.createElement("a", "teamsSearch[i].name");
+        link.innerHTML = teamsSearch[i].name
+        link.setAttribute("href", teamsSearch[i].website);
+        link.classList.add("titulTeam");
+        link.classList.add("card-title");
+        // console.log(link);
+
+        let direction = document.createElement("a", "teamsSearch[i].address")
+        direction.innerHTML = teamsSearch[i].address;
+        direction.setAttribute("href", "http://www.google.com/maps/dir/" + teamsSearch[i].address);
+        direction.classList.add("textos");
+        direction.classList.add("card-text");
+
+        let founded = document.createElement("p")
+        founded.innerHTML = "Año de fundación: " + teamsSearch[i].founded
+        founded.classList.add("enlaces");
+        founded.classList.add("card-text");
+
+        let venue = document.createElement("p")
+        venue.innerHTML = "Estadio: " + teamsSearch[i].venue
+        venue.classList.add("enlaces");
+        venue.classList.add("card-text");
+
+        let mail = document.createElement("a", "teamsSearch[i].email")
+        mail.innerHTML = "mail: " + teamsSearch[i].email
+        mail.setAttribute("href", "mailto:" + teamsSearch[i].email);
+        mail.classList.add("enlaces");
+        mail.classList.add("card-text");
+
+        let telef = document.createElement("a", "teamsSearch[i].phone")
+        telef.innerHTML = "Telefono: " + teamsSearch[i].phone
+        telef.setAttribute("href", "tel:" + teamsSearch[i].phone);
+        telef.classList.add("enlaces");
+        telef.classList.add("card-text");
+
+        // *****Creamos las celdas, las agrupamos en lineas y por ultimo en tabla*****//
+        let teamDates = [crest, link, direction, founded, venue, mail, telef]
+        for (let j = 0; j < teamDates.length; j++) {
+            const div2 = document.createElement("div");
+            div2.classList.add("parameters");
+            div2.append(teamDates[j]);
+            divTable.appendChild(div2);
+            divTeams.appendChild(divTable);
+        }
+        // console.log(divTable)
     }
+}
+
+// *****Creamos la función Limpiar Tabla***** //
+
+function limpiarTabla() {
+    document.getElementById("divTeams").innerHTML = ""
 }
 
 function alert5() {

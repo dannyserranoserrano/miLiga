@@ -91,7 +91,7 @@ let eredivisie = document.getElementById("eredivisie");
 eredivisie.addEventListener("click", () => {
     const url = "https://api.football-data.org/v2/competitions/2003/matches"
     getFetch(url)
-    document.getElementById("imgLiga").innerHTML = '<img src="https://img.planetafobal.com/2017/05/eredivisie-new-logo-2017-2018-ds.jpg">';
+    document.getElementById("imgLiga").innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eredivisie_nieuw_logo_2017-.svg/375px-Eredivisie_nieuw_logo_2017-.svg.png">';
     document.getElementById("textLiga").innerHTML = '<P>EREDIVISIE</p>';
 })
 
