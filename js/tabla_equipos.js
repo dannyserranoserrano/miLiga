@@ -97,6 +97,7 @@ eredivisie.addEventListener("click", () => {
 function teamsTable(teamsSearch) {
 
     let divTeams = document.getElementById("divTeams")
+    
     limpiarTabla()
     for (let i = 0; i < teamsSearch.length; i++) {
 
@@ -105,7 +106,7 @@ function teamsTable(teamsSearch) {
         divTable.classList.add("groupTeam");
         divTable.classList.add("card");
         divTable.classList.add("card-body");
-        divTable.classList.add("p-1");
+        
 
         let crest = document.createElement("img");
         crest.setAttribute("src", "https://crests.football-data.org/" + teamsSearch[i].id + ".svg");
