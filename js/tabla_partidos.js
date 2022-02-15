@@ -47,7 +47,7 @@ function getFetch(url) {
             quitarAlert6();
             quitarAlert7();
             filtrarJornada(matches)
-            
+
         })
 
         // *****Borramos la tabla existente al clicar en el input Text*****//
@@ -78,7 +78,7 @@ function getFetch(url) {
 
         // ¡¡¡¡¡*****AHORA LLAMAMOS A LAS FUNCIONES*****!!!!! //
         matchTable(matches);
-        
+
         // *****SI HAY UN ERROR AL CARGAR LA PÁGINA LO AVISAMOS***** //
     }).catch(error => {
         // alert("Ha ocurrido un error")
@@ -200,7 +200,7 @@ function matchTable(match) {
         let awayCrest = document.createElement("img")
         awayCrest.setAttribute("src", "https://crests.football-data.org/" + match[i].awayTeam.id + ".svg")
         awayCrest.classList.add("crestImage")
-        
+
         // *****Creamos las celdas, las agrupamos en lineas y por ultimo en tabla*****//
         let matchDates = [matchday, utcDate.toLocaleString(), homeCrest, homeTeam, score, awayTeam, awayCrest]
         for (let j = 0; j < matchDates.length; j++) {

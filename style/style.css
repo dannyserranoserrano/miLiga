@@ -78,7 +78,7 @@ div div table thead th {
 
 
 .centro .table1 {
-    max-width: 600px;
+    max-width: 500px;
 }
 
 .centro .table2 {
@@ -108,8 +108,8 @@ div div table thead th {
     flex-wrap: wrap;
     align-items: center;
     background-color: black;
-    width: 200px;
-    height: 210px;
+    width: 240px;
+    height: 220px;
     
 
 

@@ -123,7 +123,7 @@ function teamsTable(teamsSearch) {
 
         let direction = document.createElement("a", "teamsSearch[i].address")
         direction.innerHTML = teamsSearch[i].address;
-        direction.setAttribute("href", "http://www.google.com/maps/dir/" + teamsSearch[i].address);
+        direction.setAttribute("href", "http://www.google.com/maps/dir//" + teamsSearch[i].address);
         direction.classList.add("textos");
         direction.classList.add("card-text");
 
