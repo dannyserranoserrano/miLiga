@@ -27,7 +27,6 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/home.html"><strong>Home</strong></a>
                     </li>
-
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,18 +39,6 @@
                             <li><a class="dropdown-item" href="estadisticas.html">Estadisticas</a></li>
                         </ul>
                     </li>
-
-                </ul>
-                <ul class="navbar navbar-nav mb-2 col mb-lg-0">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <strong>Ligas</strong>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><button class="dropdown-item" type="button" id="laLiga">La Liga España</button></li>
-                        <li><a class="dropdown-item" href="/clasificacion.html">Otras Ligas</a></li>
-                        </li>
-                    </ul>
                 </ul>
             </div>
         </nav>
@@ -62,28 +49,44 @@
     </div>
     <div class="centro">
         <!-- *****TABLA***** -->
-        <div class="container p-3">
-            <div class="titulo col-md-12 ">
-                <div class="col-md-3">
-                    <H1>Clasificación</H1>
+        <div class="container p-5 w-75">
+            <div class="cabecero container-fluid col-auto">
+                <div class="titulo col-auto">
+                    <h1>Clasificación</h1>
                 </div>
-                <div class="textError col-md-3 mt-3" id="error">
+                <!-- *****BOTONES DE BUSQUEDA E INPUT***** -->
+                <div class="tablaBusquedas ">
+                    <!-- *****LIGAS***** -->
+                    <div class="ligas col-auto table-responsive">
+                        <div class="nav-item" col-auto nav-item dropdown" role="group">
+                            <button id="btnGroupDrop1" type="button"
+                                class="btn btn-success dropdown-toggle p-2 me-1 mb-1" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Competiciones
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <li><button class="dropdown-item" type="button" id="laLiga">La Liga España</button></li>
+                                <li><a class="dropdown-item" href="/clasificacion.html">Otras Ligas</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <div class="table-responsive">
                 <div class=" justify-content-center">
                     <table class="table table-sm table-dark table-hover border border-light ">
                         <thead class="thead theme" id="head_table">
                             <th></th>
                             <th>Equipo</th>
-                            <th>Posición</th>
-                            <th>Puntos</th>
-                            <th>P. Ganados</th>
-                            <th>P. Empatados</th>
-                            <th>P. Perdidos</th>
-                            <th>G. Favor</th>
-                            <th>G. Contra</th>
-                            <th>Dif. Goles</th>
+                            <th>Pos.</th>
+                            <th>Pts.</th>
+                            <th>PG.</th>
+                            <th>PE.</th>
+                            <th>PP.</th>
+                            <th>GF.</th>
+                            <th>GC.</th>
+                            <th>DG.</th>
                         </thead>
                         <tbody class="body_table" id="body_table">
                             <div class="m-0 row justify-content-center">

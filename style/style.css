@@ -14,79 +14,111 @@
     background: no-repeat center center rgba(0, 0, 0, 0.25)
 }
 
+ /* *****GENERAL***** */
 body {
     background-color: rgb(56, 49, 49);
 }
 
+/* *****TABLAS***** */
+.container .titulo h1, 
 .container .titulo div h1, 
 .container .titulo div h2 {
     color: white;
+    
 }
 
+/* *****GENERAL Y TABLAS***** */
 .container .titulo {
     display: flex;
     text-align: center;
-    justify-content: space-between;
+    justify-content: center;
 }
-
 div div table thead {
     font-size: 18px;
     color: rgb(56, 49, 49);
 }
-
 div div table thead th {
     background-color: rgb(207, 211, 211) !important;
 }
-
 .navbar div .collapse {
     background-color: rgb(151, 147, 147);
 }
-
-
 .logo {
     width: 200px;
 }
-
 .logo:hover {
     transition: all .5s ease-in-out;
     -webkit-transform: scale(0.6);
     transform: scale(0.6);
 }
-
 .table tbody .spinner {
     display: flex;
     justify-content: center;
 }
-
 .center .container div tbody .alert {
     text-align: center;
 }
 
+/* *****Tablas***** */
+.centro .container .cabecero{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+.centro .container .cabecero .tablaBusquedas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:end;
+}
+.centro .container .cabecero .tablaBusquedas .busquedas {
+    display: flex;
+    flex-direction: column;
+    justify-content: start
+}
+.centro .container .cabecero .tablaBusquedas .busquedas .buttonBusquedas{
+    display: flex;
+    justify-content: center;
+}
+.centro .container .cabecero .tablaBusquedas .resultados{
+    display: flex;
+    justify-content: center;
+}
 .container .table tbody img,
 .container .table1 tbody img,
 .container .table2 tbody img {
     width: 40px;
 }
-
 .container .table tbody img:hover,
 .container .table1 tbody img:hover,
 .container .table2 tbody img:hover {
     transition: all .5s ease-in-out;
     -webkit-transform: scale(2);
     transform: scale(2);
+    z-index: 5;
 }
 
 
-.centro .table1 {
-    max-width: 500px;
+/* *****ESTADISTICAS***** */
+.centroEstadisticas .container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+} 
+
+.centroEstadisticas .container .grupoTabla1{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 45%;
 }
+.centroEstadisticas .container .grupoTabla2{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 45%;
+} 
 
-.centro .table2 {
-    max-width: 400px;
-
-}
-
-
+/* *****Equipos***** */
 .centro .body .divTeams {
     border: 2px solid white;
     /* padding: 5px; */
@@ -98,7 +130,6 @@ div div table thead th {
     background-color: red;
     
 }
-
 .centro .body .divTeams .groupTeam {
     border: 2px solid white;
     padding: 5px;
@@ -110,31 +141,22 @@ div div table thead th {
     background-color: black;
     width: 240px;
     height: 220px;
-    
-
-
 }
-
 .centro .body .divTeams .groupTeam:hover {
     transition: all .5s ease-in-out;
     -webkit-transform: scale(1.25);
     transform: scale(1.25);
     z-index: 5;
 }
-
-
-
 .centro .body .divTeams .groupTeam .parameters img {
     max-height: 50px;
     display: flex;
 }
-
 .centro .body .divTeams .groupTeam .parameters img:hover {
     transition: all .5s ease-in-out;
     -webkit-transform: scale(2.3);
     transform: scale(2.3);
 }
- 
 .centro .body .divTeams .groupTeam .parameters .titulTeam {
     text-decoration: none;
     font-size: 100%;
@@ -148,7 +170,6 @@ div div table thead th {
     -webkit-transform: scale(1.5);
     transform: scale(1.5);
 }
-
 .centro .body .divTeams .groupTeam .parameters .enlaces {
     text-decoration: none;
     font-size: 70%;
@@ -157,7 +178,6 @@ div div table thead th {
     justify-content: center;
     text-align: center;
 }
-
 .centro .body .divTeams .groupTeam .parameters .textos {
     font-size: 70%;
     text-decoration: none;
@@ -167,12 +187,17 @@ div div table thead th {
     text-align: center;
 }
 
+
+/* *****GENERAL***** */
 .centro {
     background-color: red;
 }
 
+
+/* *****HOME***** */
 .container2 .centro .centro .card img:hover {
     filter: opacity(.5);
+    z-index: 5;
 }
 
 .centro .card {
@@ -191,19 +216,20 @@ table {
 .container {
     background-color: rgb(85, 75, 75);
 }
-
+/* *****CLASIFICACION***** */
 .container .leyenda {
     background-color: whitesmoke;
     color: black;
 }
 
+/* *****ENCABEZADO LIGAS***** */
 .nombreliga {
     display: flex;
     justify-content: center;
 }
 
 .nombreLiga .imageLiga img {
-    width: 100px;
+    height: 80px;
     border: 2px solid red;
     background-color: white;
 }
@@ -212,8 +238,5 @@ table {
 
     text-align: center;
     color: white;
-    size: 40px;
-}
-body div .navbar div .navbar .m-1 .btn{
-    height: 100%;
+    size: 50px;
 }

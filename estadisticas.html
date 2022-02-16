@@ -40,91 +40,97 @@
                         </ul>
                     </li>
                 </ul>
-                <ul class="navbar navbar-nav mb-2 col mb-lg-0">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <strong>Ligas</strong>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><button class="dropdown-item" type="button" id="laLiga">La Liga España</button></li>
-                        <li><button class="dropdown-item" type="button" id="premiereLeague">Premiere League
-                                Inglaterra</button>
-                        </li>
-                        <li><button class="dropdown-item" type="button" id="bundesliga">Bundesliga Alemania</button>
-                        </li>
-                        <li><button class="dropdown-item" type="button" id="ligue_1">Ligue 1 Francia</button></li>
-                        <li><button class="dropdown-item" type="button" id="serieA">Serie A Italia</button></li>
-                        <li><button class="dropdown-item" type="button" id="primeiraLiga">Primeira Liga Portugal
-                            </button></li>
-                        <li><button class="dropdown-item" type="button" id="eredivisie">Eredivisie Holanda</button></li>
-                    </ul>
-                </ul>
             </div>
         </nav>
     </div>
     <div class="nombreLiga m-0 row justify-content-center navbar-second bg-second p-1">
         <div class="imageLiga col-auto mt-2" id="imgLiga"></div>
         <div class="textLiga col-auto mt-4 fs-2 fw-bold" id="textLiga"></div>
-    </div>
 
-    <div class="centro" id="centro">
+        <!-- *****LIGAS***** -->
+        <div class="ligas col-auto table-responsive justify-content-center">
+            <div class="nav-item" col-auto nav-item dropdown" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-success dropdown-toggle p-2 me-1 mb-1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Competiciones
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <li><button class="dropdown-item" type="button" id="laLiga">La Liga España</button></li>
+                    <li><button class="dropdown-item" type="button" id="premiereLeague">Premiere League
+                            Inglaterra</button>
+                    </li>
+                    <li><button class="dropdown-item" type="button" id="bundesliga">Bundesliga
+                            Alemania</button>
+                    </li>
+                    <li><button class="dropdown-item" type="button" id="ligue_1">Ligue 1 Francia</button>
+                    </li>
+                    <li><button class="dropdown-item" type="button" id="serieA">Serie A Italia</button></li>
+                    <li><button class="dropdown-item" type="button" id="primeiraLiga">Primeira Liga Portugal
+                        </button></li>
+                    <li><button class="dropdown-item" type="button" id="eredivisie">Eredivisie
+                            Holanda</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="centro row justify-content-center" id="centro">
         <!-- ***** CABEZA DE TABLA***** -->
-        <div class="container p-4">
+        <div class="container p-5 col-md-5">
             <div class="titulo col-lg">
                 <div>
                     <p class="text-light fs-3">Top 5 Mejor Promedio Goleador</p>
                 </div>
             </div>
             <div class="table-responsive">
-                <div class=" justify-content-center">
+                <div class="tabla1 align-items-center">
                     <table class="table1 table table-sm table-dark table-hover border border-light ">
-                    <thead id="head_table1 ">
-                        <th></th>
-                        <th>Equipo</th>
-                        <th>Goles</th>
-                        <th>Partidos</th>
-                        <th>Promedio Goleador</th>
-                    </thead>
-                    <tbody id="body_table1">
-                        <div class="m-0 row justify-content-center">
-                            <div class=" spinner spinner-border text-secondary spinner-border-sm col-auto m-5"
-                                style="width: 5rem; height:5rem" role="status" id="spinner1">
+                        <thead id="head_table1 ">
+                            <th></th>
+                            <th>Equipo</th>
+                            <th>Goles</th>
+                            <th>Partidos</th>
+                            <th>Promedio</th>
+                        </thead>
+                        <tbody id="body_table1">
+                            <div class="m-0 row justify-content-center">
+                                <div class=" spinner spinner-border text-secondary spinner-border-sm col-auto m-5"
+                                    style="width: 5rem; height:5rem" role="status" id="spinner1">
+                                </div>
                             </div>
-                        </div>
-                        <div class="m-0 row justify-content-center">
-                            <div class="alert alert-primary col-auto" role="alert" id="alert5">
-                                AVISO!!! SE HA PRODUCIDO UN ERROR AL CARGAR LA PÁGINA
+                            <div class="m-0 row justify-content-center">
+                                <div class="alert alert-primary col-auto" role="alert" id="alert5">
+                                    AVISO!!! SE HA PRODUCIDO UN ERROR AL CARGAR LA PÁGINA
+                                </div>
                             </div>
-                        </div>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
 
-        <div class="container p-4">
+        <div class="container p-5 col-md-5">
             <div class="titulo col-lg">
                 <div>
-                    <p class="text-light fs-3">Top 5 Menos Goleados Fuera De Casa</p>
+                    <p class="text-light fs-3">Top 5 Menos Goleados Visitantes</p>
                 </div>
             </div>
             <div class="table-responsive">
                 <div class=" justify-content-center">
                     <table class="table2 table table-sm table-dark table-hover border border-light ">
-                            <thead id="head_table2 ">
-                        <th></th>
-                        <th>Equipo</th>
-                        <th>Goles</th>
-                        <th>Partidos</th>
-                    </thead>
-                    <tbody id="body_table2">
-                        <div class="m-0 row justify-content-center">
-                            <div class=" spinner spinner-border text-secondary spinner-border-sm col-auto m-5"
-                                style="width: 5rem; height:5rem" role="status" id="spinner2">
+                        <thead id="head_table2 ">
+                            <th></th>
+                            <th>Equipo</th>
+                            <th>Goles</th>
+                            <th>Partidos</th>
+                        </thead>
+                        <tbody id="body_table2">
+                            <div class="m-0 row justify-content-center">
+                                <div class=" spinner spinner-border text-secondary spinner-border-sm col-auto m-5"
+                                    style="width: 5rem; height:5rem" role="status" id="spinner2">
+                                </div>
                             </div>
-                        </div>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

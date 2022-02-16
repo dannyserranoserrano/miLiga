@@ -41,34 +41,6 @@
                         </ul>
                     </li>
                 </ul>
-                <ul class="navbar navbar-nav mb-2 col mb-lg-0">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <strong>Ligas</strong>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/clasligaEsp.html">La Liga España</a></li>
-                        <li><button class="dropdown-item" type="button" id="premiereLeague">Premiere League
-                                Inglaterra</button>
-                        </li>
-                        <li><button class="dropdown-item" type="button" id="bundesliga">Bundesliga Alemania</button>
-                        </li>
-                        <li><button class="dropdown-item" type="button" id="ligue_1">Ligue 1 Francia</button></li>
-                        <li><button class="dropdown-item" type="button" id="serieA">Serie A Italia</button></li>
-                        <li><button class="dropdown-item" type="button" id="primeiraLiga">Primeira Liga Portugal
-                            </button></li>
-                        <li><button class="dropdown-item" type="button" id="eredivisie">Eredivisie Holanda</button></li>
-                    </ul>
-                </ul>
-                <ul class=" container-fluid navbar navbar-nav col-auto">
-                    <li class="m-1"><button class="btn btn-success me-2 nav-link text-light col-md p-2" id="buscar"
-                            type="button">Equipo</button></li>
-                    <li class="m-1"><button class="btn btn-success me-2 nav-link text-light col-md p-2" id="buscar2"
-                            type="button">Posición</button></li>
-                    <li><input class="form-control me-2 nav-link col-md" id="search" type="text"
-                            placeholder="Equipo o Posición" aria-label="Search"></li>
-
-                </ul>
             </div>
         </nav>
     </div>
@@ -78,28 +50,71 @@
     </div>
     <div class="centro">
         <!-- *****TABLA***** -->
-        <div class="container p-3">
-            <div class="titulo col-md-12 ">
-                <div class="col-md-3">
-                    <H1>Clasificación</H1>
+        <div class="container p-5 w-75">
+            
+            <!-- ******MENUS PARA OPCIONES DE BUSQUEDA***** -->
+            <div class="cabecero container-fluid col-auto">
+                <div class="titulo col-auto">
+                    <h1>Clasificación</h1>
                 </div>
-                <div class="textError col-md-3 mt-3" id="error">
+                <!-- *****BOTONES DE BUSQUEDA E INPUT***** -->
+                <div class="tablaBusquedas ">
+                    <!-- *****LIGAS***** -->
+                    <div class="ligas col-auto table-responsive">
+                        <div class="nav-item" col-auto nav-item dropdown" role="group">
+                            <button id="btnGroupDrop1" type="button"
+                                class="btn btn-success dropdown-toggle p-2 me-1 mb-1" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Competiciones
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <li><a class="dropdown-item" href="/clasligaEsp.html">La Liga España</a></li>
+                                <li><button class="dropdown-item" type="button" id="premiereLeague">Premiere League
+                                        Inglaterra</button>
+                                </li>
+                                <li><button class="dropdown-item" type="button" id="bundesliga">Bundesliga
+                                        Alemania</button>
+                                </li>
+                                <li><button class="dropdown-item" type="button" id="ligue_1">Ligue 1 Francia</button>
+                                </li>
+                                <li><button class="dropdown-item" type="button" id="serieA">Serie A Italia</button></li>
+                                <li><button class="dropdown-item" type="button" id="primeiraLiga">Primeira Liga Portugal
+                                    </button></li>
+                                <li><button class="dropdown-item" type="button" id="eredivisie">Eredivisie
+                                        Holanda</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="busquedas col-auto table-responsive">
+                        <div class="buttonBusquedas btn-group col-auto">
+                            <button class="btn btn-success  nav-link text-light p-2" id="buscar"
+                                type="button">Equipo</button>
+                            <button class="btn btn-success  nav-link text-light p-2" id="buscar2"
+                                type="button">Posicion</button>
+
+                        </div>
+                        <div class="inputBusquedas">
+                            <div class="nav-item"><input class="form-control nav-link col-auto me-auto mt-2 mb-1"
+                                    id="search" type="text" placeholder="Equipo o Posición" aria-label="Search"></div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="table-responsive">
-                <div class=" justify-content-center">
+                <div class="justify-content-center">
                     <table class="table table-sm table-dark table-hover border border-light ">
                         <thead id="head_table ">
                             <th></th>
                             <th>Equipo</th>
-                            <th>Posición</th>
-                            <th>Puntos</th>
-                            <th>P. Ganados</th>
-                            <th>P. Empatados</th>
-                            <th>P. Perdidos</th>
-                            <th>G. Favor</th>
-                            <th>G. Contra</th>
-                            <th>Dif. Goles</th>
+                            <th>Pos.</th>
+                            <th>Pts.</th>
+                            <th>PG.</th>
+                            <th>PE.</th>
+                            <th>PP.</th>
+                            <th>GF.</th>
+                            <th>GC.</th>
+                            <th>DG.</th>
                         </thead>
                         <tbody class="body_table" id="body_table">
                             <div class="m-0 row justify-content-center">

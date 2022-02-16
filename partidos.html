@@ -41,36 +41,6 @@
                         </ul>
                     </li>
                 </ul>
-                <ul class="navbar navbar-nav mb-2 mb-lg-0">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <strong>Ligas</strong>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><button class="dropdown-item" type="button" id="laLiga">La Liga España</button></li>
-                        <li><button class="dropdown-item" type="button" id="premiereLeague">Premiere League
-                                Inglaterra</button>
-                        </li>
-                        <li><button class="dropdown-item" type="button" id="bundesliga">Bundesliga Alemania</button>
-                        </li>
-                        <li><button class="dropdown-item" type="button" id="ligue_1">Ligue 1 Francia</button></li>
-                        <li><button class="dropdown-item" type="button" id="serieA">Serie A Italia</button></li>
-                        <li><button class="dropdown-item" type="button" id="primeiraLiga">Primeira Liga Portugal
-                            </button></li>
-                        <li><button class="dropdown-item" type="button" id="eredivisie">Eredivisie Holanda</button></li>
-
-                    </ul>
-                </ul>
-                <ul class="navbar navbar-nav col-auto">
-                    <li class="nav-item m-1"><button class="btn btn-success me-2 nav-link text-light p-2" id="buscar"
-                            type="button">Equipo</button></li>
-                    <li class="nav-item m-1"><button class="btn btn-success me-2 nav-link text-light p-2" id="buscar2"
-                            type="button">Jornada</button></li>
-                    <li class="nav-item m-1"><button class="btn btn-success me-2 nav-link text-light p-2" id="clear" type="button"
-                            onclick="clearRads();">Borrar</button></li>
-                    <li class="nav-item m-1"><input class="form-control nav-link col-auto me-auto" id="search" type="text"
-                            placeholder="Equipo o Jornada" aria-label="Search"></li>
-                </ul>
             </div>
         </nav>
     </div>
@@ -83,40 +53,79 @@
     <div class="centro" id="centro">
         <!-- ***** CABEZA DE TABLA***** -->
         <div class="container p-4">
-
-            <div class="titulo col-lg">
-                <div class="col-md-2">
+            <!-- ******MENUS PARA OPCIONES DE BUSQUEDA***** -->
+            <div class="cabecero container-fluid col-auto align-items-center">
+                <div class="titulo col-auto">
                     <h1>Resultados</h1>
                 </div>
+                <!-- *****BOTONES DE BUSQUEDA E INPUT***** -->
+                <div class="tablaBusquedas">
+                    <!-- *****LIGAS***** -->
+                    <div class="ligas col-auto table-responsive">
+                        <div class="nav-item" col-auto nav-item dropdown" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-success dropdown-toggle p-2 me-1 mb-1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Competiciones
+                              </button>
+                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <li><button class="dropdown-item" type="button" id="laLiga">La Liga España</button></li>
+                                <li><button class="dropdown-item" type="button" id="premiereLeague">Premiere League
+                                        Inglaterra</button>
+                                </li>
+                                <li><button class="dropdown-item" type="button" id="bundesliga">Bundesliga
+                                        Alemania</button>
+                                </li>
+                                <li><button class="dropdown-item" type="button" id="ligue_1">Ligue 1 Francia</button>
+                                </li>
+                                <li><button class="dropdown-item" type="button" id="serieA">Serie A Italia</button></li>
+                                <li><button class="dropdown-item" type="button" id="primeiraLiga">Primeira Liga Portugal
+                                    </button></li>
+                                <li><button class="dropdown-item" type="button" id="eredivisie">Eredivisie
+                                        Holanda</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="busquedas col-auto table-responsive">
+                        <div class="buttonBusquedas btn-group col-auto">
+                            <button class="btn btn-success  nav-link text-light p-2" id="buscar"
+                                type="button">Equipo</button>
+                            <button class="btn btn-success  nav-link text-light p-2" id="buscar2"
+                                type="button">Jornada</button>
+                            <button class="btn btn-success  nav-link text-light p-2" id="clear" type="button"
+                                onclick="clearRads();">Borrar</button>
+                        </div>
+                        <div class="inputBusquedas">
+                            <div class="nav-item"><input class="form-control nav-link col-auto me-auto mt-2 mb-1" id="search"
+                                    type="text" placeholder="Equipo o Jornada" aria-label="Search"></div>
+                        </div>
+                    </div>
+                    <!-- *****OPCIONES POR RESULTADO***** -->
+                    <div class="resultados btn-group-vertical ms-1 mb-1 col-auto">
+                        <input class="btn-check" type="radio" name="radioList" value="Ganados" id="rad1"
+                            autocomplete="off">
+                        <label class="btn btn-light" for="rad1">
+                            Ganados
+                        </label>
+
+                        <input class="btn-check" type="radio" name="radioList" value="Empatados" id="rad2"
+                            autocomplete="off">
+                        <label class="btn btn-light" for="rad2">
+                            Empatados
+                        </label>
+
+                        <input class="btn-check" type="radio" name="radioList" value="Perdidos" id="rad3"
+                            autocomplete="off">
+                        <label class="btn btn-light" for="rad3">
+                            Perdidos
+                        </label>
+
+                        <input class="btn-check" type="radio" name="radioList" value="Proximos" id="rad4"
+                            autocomplete="off">
+                        <label class="btn btn-light" for="rad4">
+                            Proximos
+                        </label>
+                    </div>
+                </div>
             </div>
-            <!-- *****OPCIONES POR RESULTADO***** -->
-            <div class="row  option mb-2 container-fluid align-items-center">
-
-               <div class="col-auto container-fluid"><input class="btn-check" type="radio" name="radioList" value="Ganados" id="rad1" autocomplete="off">
-                <label class="btn btn-light" for="rad1">
-                    Ganados
-                </label></div> 
-
-                <div class="col-auto container-fluid"><input class="btn-check" type="radio" name="radioList" value="Empatados" id="rad2"
-                    autocomplete="off">
-                <label class="btn btn-light" for="rad2">
-                    Empatados
-                </label></div>
-
-                <div class="col-auto container-fluid"><input class="btn-check" type="radio" name="radioList" value="Perdidos" id="rad3"
-                    autocomplete="off">
-                <label class="btn btn-light" for="rad3">
-                    Perdidos
-                </label></div>
-
-                <div class="col-auto container-fluid"><input class="btn-check" type="radio" name="radioList" value="Proximos" id="rad4"
-                    autocomplete="off">
-                <label class="btn btn-light" for="rad4">
-                    Proximos
-                </label></div>
-
-            </div>
-
             <!-- *****TABLA*****    -->
             <div class="table-responsive">
                 <div class=" justify-content-center">
