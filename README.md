@@ -14,6 +14,7 @@
 <p>-Visualización de todos los resultados de la Liga nacional, tanto los jugados como los que quedan por jugar. Además dispondrá de una función de fitrado por Partidos ganados, empatados y perdidos del equipo seleccionado, así como los proximos partidos a jugar. En dicha información observará tanto el numero de jornada, fecha y hora del encuentro, nombre y escudo de los equipos enfrentados y resultado obtenido.</p>
 <p>-Visualización tanto del top 5 equipos con mejor promedio goleador, como del top 5 equipos menos goleados fuera de casa.</p>
 <p>-Todos estos datos, no solo podemos mostrarlos de la liga española, sino que tambien disponemos de un desplegable con enlaces a otra ligas europeas, a las cuales se les aplicará los mismos filtros que a la liga principal</p>
+<p>-Visualización de los principales datos de cada equipo, como escudo, estadio, año de fundación, dirección, correo y telefono, con sus diferentes enlaces</p> 
 <h3>Tecnologías  y leguajes empleados</h3>
 <img src="/images/mix.jpg" alt="Tecnologias">
 <h4>HTML5:</h4> <p>Utilizado para  montar el esqueleto de la web.</p>
@@ -36,7 +37,9 @@
 <h5>-staticsTable2() y statics2():</h5> <p>Funciones con las que filtramos y creamos las tablas de estadisticas del Top 5 equipos menos golados fuera de casa.</p>
 <h3>Versiones</h3>
 <h4>-v1.0 (16.02.2022):</h4> <p>Presentación proyecto.</p>
+<h4>-v1.1 (17.02.2022):</h4> <p>Recolocación de botones de busqueda para crear una comodidad de uso al usuario.</p>
+<p>Mejoras esteticas para un mejor rendimmiento en modo Responsive.</p>
 <h3>TO-DO</h3>
 <p>-Mejora de diseño</p>
 <P>-Añadir nuevas opciones de búsqueda para facilitar al usuario así como dar mas información, o de una manera mas práctica</p>
-<p>-Añadir secciones de noticis deportivas actualizadas</p>
+<p>-Añadir secciones de noticias deportivas actualizadas</p>
