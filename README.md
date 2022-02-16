@@ -38,7 +38,8 @@
 <h3>Versiones</h3>
 <h4>-v1.0 (16.02.2022):</h4> <p>Presentación proyecto.</p>
 <h4>-v1.1 (17.02.2022):</h4> <p>Recolocación de botones de busqueda para crear una comodidad de uso al usuario.</p>
-<p>Mejoras esteticas para un mejor rendimmiento en modo Responsive.</p>
+<p>Creación de nuevos filtros para busquedas pas efectivas en tablas de Resultados.</p>
+<p>Mejoras esteticas para un mejor rendimiento en modo Responsive.</p>
 <h3>TO-DO</h3>
 <p>-Mejora de diseño</p>
 <P>-Añadir nuevas opciones de búsqueda para facilitar al usuario así como dar mas información, o de una manera mas práctica</p>

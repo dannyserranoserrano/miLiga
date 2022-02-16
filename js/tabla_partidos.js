@@ -78,12 +78,13 @@ function getFetch(url) {
 
         // ¡¡¡¡¡*****AHORA LLAMAMOS A LAS FUNCIONES*****!!!!! //
         matchTable(matches);
+        // console.log(matches)
 
         // *****SI HAY UN ERROR AL CARGAR LA PÁGINA LO AVISAMOS***** //
-    }).catch(error => {
-        // alert("Ha ocurrido un error")
-        console.log("Alerta Fallo al cargar");
-        alert5()
+        }).catch(error => {
+            // alert("Ha ocurrido un error")
+            console.log("Alerta Fallo al cargar");
+            alert5()
     })
 }
 
@@ -176,8 +177,10 @@ function matchTable(match) {
 
         let matchday = document.createElement("p")
         matchday.innerHTML = match[i].matchday
-        // *****cogemos y cambiamos el formato de la fecha al formato español***** //
+
+        // *****Cogemos y cambiamos el formato de la fecha al formato español***** //
         let utcDate = new Date(match[i].utcDate)
+
         // *****Aqui cogemos la imagen de la web cogiendo el numero de equipo******//
         let homeCrest = document.createElement("img")
         homeCrest.setAttribute("src", "https://crests.football-data.org/" + match[i].homeTeam.id + ".svg")
@@ -201,8 +204,32 @@ function matchTable(match) {
         awayCrest.setAttribute("src", "https://crests.football-data.org/" + match[i].awayTeam.id + ".svg")
         awayCrest.classList.add("crestImage")
 
+        let status = document.createElement("p")
+        if (match[i].status == "IN_PLAY") {
+            status.innerHTML = "En Juego"
+        } else if (match[i].status == "FINISHED") {
+            status.innerHTML = "Finalizado"
+        } else if (match[i].status == "SCHEDULED") {
+            status.innerHTML = "Sin Jugar"
+        } else if (match[i].status == "POSTPONED") {
+            status.innerHTML = "Suspendido"
+
+
+            // "status": "FINISHED",
+            // "status": "IN_PLAY",
+            // "status": "SCHEDULED",
+            // "status": "POSTPONED",
+        }
+
+        let referees = document.createElement("p")
+        if (match[i].referees.length == 0 ) {
+            referees.innerHTML = "Sin Asignar"
+        } else {
+            referees.innerHTML = match[i].referees[0].name
+        }
+
         // *****Creamos las celdas, las agrupamos en lineas y por ultimo en tabla*****//
-        let matchDates = [matchday, utcDate.toLocaleString(), homeCrest, homeTeam, score, awayTeam, awayCrest]
+        let matchDates = [matchday, utcDate.toLocaleString(), homeCrest, homeTeam, score, awayTeam, awayCrest, status, referees]
         for (let j = 0; j < matchDates.length; j++) {
             const td = document.createElement("td")
             td.append(matchDates[j])
@@ -219,13 +246,6 @@ function filtrarEquipos(partidos) {
     // *****Creamos variable de busqueda con el valor introducido*****//
 
     let search = document.getElementById("search").value
-
-    if (search == "") {
-        return alert1()
-    }
-    if (!isNaN(search)) {
-        return alert6()
-    }
 
     // *****Creamos un array en base a la comparativa entre lo introducido y lo buscado*****//
 
@@ -260,6 +280,12 @@ function filtrarEquipos(partidos) {
                 (x.awayTeam.name.toLowerCase().includes(search.toLowerCase()) && x.score.winner == "AWAY_TEAM")) {
                 return true;
             }
+            if (search == "") {
+                return alert1()
+            }
+            if (!isNaN(search)) {
+                return alert6()
+            }
         }
 
         //*****Partidos Empatados*****/
@@ -275,6 +301,21 @@ function filtrarEquipos(partidos) {
                 (x.awayTeam.name.toLowerCase().includes(search.toLowerCase()) && x.score.winner == "HOME_TEAM")) {
                 return true;
             }
+            if (search == "") {
+                return alert1()
+            }
+            if (!isNaN(search)) {
+                return alert6()
+            }
+        }
+
+        //*****Partidos Suspendidos*****/
+
+        if (radioBoton.value === "Suspendidos") {
+            if ((x.homeTeam.name.toLowerCase().includes(search.toLowerCase()) && x.status == "POSTPONED") ||
+                (x.awayTeam.name.toLowerCase().includes(search.toLowerCase()) && x.status == "POSTPONED")) {
+                return true;
+            }
         }
 
         //*****Proximos Partidos*****/
@@ -283,6 +324,32 @@ function filtrarEquipos(partidos) {
             if ((x.homeTeam.name.toLowerCase().includes(search.toLowerCase()) && x.score.fullTime.homeTeam === null) ||
                 (x.awayTeam.name.toLowerCase().includes(search.toLowerCase()) && x.score.fullTime.awayTeam === null)) {
                 return true;
+            }
+        }
+
+        //*****Jugados Local*****/
+
+        if (radioBoton.value === "Local") {
+            if (x.homeTeam.name.toLowerCase().includes(search.toLowerCase())) {
+                return true;
+            }
+            if (search == "") {
+                return alert1()
+            }
+            if (!isNaN(search)) {
+                return alert6()
+            }
+        }
+
+        //*****Jugados Visitante *****/
+
+        if (radioBoton.value === "Visitante") {
+            if (x.awayTeam.name.toLowerCase().includes(search.toLowerCase())) {
+                return true;
+            } else if (search == "") {
+                return alert1()
+            } else if (!isNaN(search)) {
+                return alert6()
             }
         }
     })

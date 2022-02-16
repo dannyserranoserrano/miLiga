@@ -65,6 +65,10 @@ div div table thead th {
     justify-content:space-between;
     flex-wrap: wrap;
 }
+.centro .container .grupoTable{
+    display: flex;
+    justify-content: center;
+}
 .centro .container .cabecero .tablaBusquedas {
     display: flex;
     flex-wrap: wrap;

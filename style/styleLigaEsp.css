@@ -23,7 +23,10 @@ body {
     justify-content:space-between;
     flex-wrap: wrap;
 }
-
+.centro .container .grupoTable{
+    display: flex;
+    justify-content: center;
+}
 div div table thead{
     font-size: 18px;
     color: rgb(56, 49, 49);}

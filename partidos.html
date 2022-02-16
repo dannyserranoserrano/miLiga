@@ -63,9 +63,11 @@
                     <!-- *****LIGAS***** -->
                     <div class="ligas col-auto table-responsive">
                         <div class="nav-item" col-auto nav-item dropdown" role="group">
-                            <button id="btnGroupDrop1" type="button" class="btn btn-success dropdown-toggle p-2 me-1 mb-1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button id="btnGroupDrop1" type="button"
+                                class="btn btn-success dropdown-toggle p-2 me-1 mb-1" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 Competiciones
-                              </button>
+                            </button>
                             <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                                 <li><button class="dropdown-item" type="button" id="laLiga">La Liga España</button></li>
                                 <li><button class="dropdown-item" type="button" id="premiereLeague">Premiere League
@@ -94,35 +96,62 @@
                                 onclick="clearRads();">Borrar</button>
                         </div>
                         <div class="inputBusquedas">
-                            <div class="nav-item"><input class="form-control nav-link col-auto me-auto mt-2 mb-1" id="search"
-                                    type="text" placeholder="Equipo o Jornada" aria-label="Search"></div>
+                            <div class="nav-item"><input class="form-control nav-link col-auto me-auto mt-2 mb-1"
+                                    id="search" type="text" placeholder="Equipo o Jornada" aria-label="Search"></div>
                         </div>
                     </div>
                     <!-- *****OPCIONES POR RESULTADO***** -->
-                    <div class="resultados btn-group-vertical ms-1 mb-1 col-auto">
-                        <input class="btn-check" type="radio" name="radioList" value="Ganados" id="rad1"
-                            autocomplete="off">
-                        <label class="btn btn-light" for="rad1">
-                            Ganados
-                        </label>
+                    <div class="ligas col-auto table-responsive">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-success dropdown-toggle p-2 ms-1 mb-1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Opciones
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <div class="resultados btn-group-vertical ms-1 mb-1 col-auto">
+                                <input class="btn-check" type="radio" name="radioList" value="Ganados" id="rad1"
+                                    autocomplete="off">
+                                <label class="btn btn-light" for="rad1">
+                                    Ganados
+                                </label>
 
-                        <input class="btn-check" type="radio" name="radioList" value="Empatados" id="rad2"
-                            autocomplete="off">
-                        <label class="btn btn-light" for="rad2">
-                            Empatados
-                        </label>
+                                <input class="btn-check" type="radio" name="radioList" value="Empatados" id="rad2"
+                                    autocomplete="off">
+                                <label class="btn btn-light" for="rad2">
+                                    Empatados
+                                </label>
 
-                        <input class="btn-check" type="radio" name="radioList" value="Perdidos" id="rad3"
-                            autocomplete="off">
-                        <label class="btn btn-light" for="rad3">
-                            Perdidos
-                        </label>
+                                <input class="btn-check" type="radio" name="radioList" value="Perdidos" id="rad3"
+                                    autocomplete="off">
+                                <label class="btn btn-light" for="rad3">
+                                    Perdidos
+                                </label>
 
-                        <input class="btn-check" type="radio" name="radioList" value="Proximos" id="rad4"
-                            autocomplete="off">
-                        <label class="btn btn-light" for="rad4">
-                            Proximos
-                        </label>
+                                <input class="btn-check" type="radio" name="radioList" value="Suspendidos" id="rad4"
+                                    autocomplete="off">
+                                <label class="btn btn-light" for="rad4">
+                                    Suspendidos
+                                </label>
+
+                                <input class="btn-check" type="radio" name="radioList" value="Proximos" id="rad5"
+                                    autocomplete="off">
+                                <label class="btn btn-light" for="rad5">
+                                    Proximos
+                                </label>
+
+                                <input class="btn-check" type="radio" name="radioList" value="Local" id="rad6"
+                                    autocomplete="off">
+                                <label class="btn btn-light" for="rad6">
+                                    Local
+                                </label>
+
+                                <input class="btn-check" type="radio" name="radioList" value="Visitante" id="rad7"
+                                    autocomplete="off">
+                                <label class="btn btn-light" for="rad7">
+                                    Visitante
+                                </label>
+
+                            </div>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -138,6 +167,8 @@
                             <th>Resultado</th>
                             <th>E.Visitante</th>
                             <th></th>
+                            <th>Estado</th>
+                            <th>Arbitro</th>
                         </thead>
                         <tbody id="body_table">
                             <div class="m-0 row justify-content-center">
