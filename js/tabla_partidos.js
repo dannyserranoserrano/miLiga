@@ -212,7 +212,7 @@ function matchTable(match) {
         } else if (match[i].status == "SCHEDULED") {
             status.innerHTML = "Sin Jugar"
         } else if (match[i].status == "POSTPONED") {
-            status.innerHTML = "Suspendido"
+            status.innerHTML = "Aplazado"
 
 
             // "status": "FINISHED",

@@ -69,6 +69,11 @@ div div table thead th {
     display: flex;
     justify-content: center;
 }
+.centro .container .cabecero .tablaBusquedas .ligas {
+    display: flex;
+    flex-direction: column;
+    justify-content: start
+}
 .centro .container .cabecero .tablaBusquedas {
     display: flex;
     flex-wrap: wrap;
