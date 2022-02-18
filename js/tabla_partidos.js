@@ -19,7 +19,7 @@ function getFetch(url) {
         }
     }).then(data2 => {
         let matches = data2.matches
-        // console.log(data2)
+        console.log(data2)
         // ¡¡¡¡¡*****AQUI INSERTAMOS TODOS LOS BOTONES, Y TRAS ELLOS LAS LLAMADAS*****!!!!! //
 
         // *****Activamos la funcion al pulsar el boton de Equipo*****//

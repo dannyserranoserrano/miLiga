@@ -14,7 +14,7 @@ function getFetch(url) {
     }).then(data => {
        
         let datos = data.standings[0].table
-        // console.log(datos)
+        console.log(datos)
         // ¡¡¡¡¡*****AQUI INSERTAMOS TODOS LOS BOTONES SI LOS TUVIESEMOS *****!!!!! //
         
         // *****QUITAMOS EL SPINNER***** //
@@ -64,6 +64,9 @@ function standingsTable(standings) {
         let points = document.createElement("p")
         points.innerHTML = standings[i].points
 
+        let playedGames = document.createElement("p")
+        playedGames.innerHTML = standings[i].playedGames
+
         let won = document.createElement("p")
         won.innerHTML = standings[i].won
 
@@ -83,7 +86,7 @@ function standingsTable(standings) {
         goalDifference.innerHTML = standings[i].goalDifference
 
 
-        let standingsDates = [crest, team, position, points, won, draw, lost, goalsFor, goalsAgainst, goalDifference]
+        let standingsDates = [crest, team, position, points, playedGames, won, draw, lost, goalsFor, goalsAgainst, goalDifference]
         for (let j = 0; j < standingsDates.length; j++) {
             const td = document.createElement("td")
             td.append(standingsDates[j])

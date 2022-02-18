@@ -24,9 +24,9 @@ function getFetch(url) {
 
 
         // *****SI HAY UN ERROR AL CARGAR LA PÁGINA LO AVISAMOS***** //
-        // }).catch(error => {
-        //     alert5()
-        //     console.log("Alerta Fallo al cargar");
+        }).catch(error => {
+            alert5()
+            console.log("Alerta Fallo al cargar");
     })
 }
 // EJECUTAMOS LA FUNCION*****//
