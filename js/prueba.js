@@ -13,8 +13,8 @@ function getFetch(url) {
     }).then(data => {
         let list = data
         console.log(list)
-    }).catch(err => {
-        console.error(err);
+    // }).catch(err => {
+    //     console.error(err);
     });
 }
 getFetch("https://api-football-v1.p.rapidapi.com/v3/standings?season=2021&league=140")

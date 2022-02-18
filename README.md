@@ -40,6 +40,7 @@
 <h4>-v1.1 (17.02.2022):</h4> <p>Recolocación de botones de busqueda para crear una comodidad de uso al usuario.</p>
 <p>Creación de nuevos filtros para busquedas pas efectivas en tablas de Resultados.</p>
 <p>Mejoras esteticas para un mejor rendimiento en modo Responsive.</p>
+<h4>-v2.0 (18.02.2022):</h4> <p>Creación de widgeds para las noticias en la página Home. Ahora se actualizan con los medios deportivos principales.</p>
 <h3>TO-DO</h3>
 <p>-Mejora de diseño</p>
 <P>-Añadir nuevas opciones de búsqueda para facilitar al usuario así como dar mas información, o de una manera mas práctica</p>
