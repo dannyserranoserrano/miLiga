@@ -5,6 +5,8 @@ quitarAlert4();
 quitarAlert5();
 quitarAlert6();
 quitarAlert7();
+quitarAlert8();
+quitarAlert9();
 
 function getFetch(url) {
 
@@ -19,8 +21,25 @@ function getFetch(url) {
         }
     }).then(data2 => {
         let matches = data2.matches
-        console.log(data2)
+        // console.log(data2)
         // ¡¡¡¡¡*****AQUI INSERTAMOS TODOS LOS BOTONES, Y TRAS ELLOS LAS LLAMADAS*****!!!!! //
+
+
+       // *****Activamos la funcion al pulsar el boton Proxima Jornada*****//
+        let boton3 = document.getElementById("rad0")
+        boton3.addEventListener("click", () => {
+            quitarAlert1();
+            quitarAlert2();
+            quitarAlert3();
+            quitarAlert4();
+            quitarAlert5();
+            quitarAlert6();
+            quitarAlert7();
+            quitarAlert8();
+            quitarAlert9();
+            filtrarLastTime(matches);
+
+        })
 
         // *****Activamos la funcion al pulsar el boton de Equipo*****//
         let boton = document.getElementById("buscar")
@@ -32,8 +51,10 @@ function getFetch(url) {
             quitarAlert5();
             quitarAlert6();
             quitarAlert7();
+            quitarAlert8();
+            quitarAlert9();
             filtrarEquipos(matches)
-
+            
         })
 
         // *****Activamos la funcion de filtrado por jornada al pulsar el boton de Jornada*****//
@@ -46,8 +67,10 @@ function getFetch(url) {
             quitarAlert5();
             quitarAlert6();
             quitarAlert7();
+            quitarAlert8();
+            quitarAlert9();
             filtrarJornada(matches)
-
+            
         })
 
         // *****Borramos la tabla existente al clicar en el input Text*****//
@@ -61,7 +84,10 @@ function getFetch(url) {
             quitarAlert5();
             quitarAlert6();
             quitarAlert7();
-            matchTable(matches);
+            quitarAlert8();
+            quitarAlert9();
+            // matchTable(matches);
+            filtrarLastTime(matches);
         });
         // *****QUITAMOS EL SPINNER***** //
         spinnerOut()
@@ -75,9 +101,12 @@ function getFetch(url) {
         quitarAlert5();
         quitarAlert6();
         quitarAlert7();
+        quitarAlert8();
+        quitarAlert9();
 
         // ¡¡¡¡¡*****AHORA LLAMAMOS A LAS FUNCIONES*****!!!!! //
-        matchTable(matches);
+        // matchTable(matches);
+        filtrarLastTime(matches);
         // console.log(matches)
 
         // *****SI HAY UN ERROR AL CARGAR LA PÁGINA LO AVISAMOS***** //
@@ -214,7 +243,6 @@ function matchTable(match) {
         } else if (match[i].status == "POSTPONED") {
             status.innerHTML = "Aplazado"
 
-
             // "status": "FINISHED",
             // "status": "IN_PLAY",
             // "status": "SCHEDULED",
@@ -222,7 +250,7 @@ function matchTable(match) {
         }
 
         let referees = document.createElement("p")
-        if (match[i].referees.length == 0 ) {
+        if (match[i].referees.length == 0) {
             referees.innerHTML = "Sin Asignar"
         } else {
             referees.innerHTML = match[i].referees[0].name
@@ -306,8 +334,23 @@ function filtrarEquipos(partidos) {
             }
             if (!isNaN(search)) {
                 return alert6()
+
             }
         }
+
+        //*****Partidos En Juego*****/
+
+        if (radioBoton.value === "in_play") {
+            if ((x.homeTeam.name.toLowerCase().includes(search.toLowerCase()) && x.status == "IN_PLAY") ||
+                (x.awayTeam.name.toLowerCase().includes(search.toLowerCase()) && x.status == "IN_PLAY")) {
+                return true;
+            }
+            if (x.status.length != "IN_PLAY") {
+                return alert8(),
+                    matchTable(resultFilter)
+            }
+        }
+
 
         //*****Partidos Suspendidos*****/
 
@@ -315,6 +358,10 @@ function filtrarEquipos(partidos) {
             if ((x.homeTeam.name.toLowerCase().includes(search.toLowerCase()) && x.status == "POSTPONED") ||
                 (x.awayTeam.name.toLowerCase().includes(search.toLowerCase()) && x.status == "POSTPONED")) {
                 return true;
+            }
+            if (x.status.length != "POSTPONED") {
+                return alert9(),
+                    matchTable(resultFilter)
             }
         }
 
@@ -347,13 +394,51 @@ function filtrarEquipos(partidos) {
             if (x.awayTeam.name.toLowerCase().includes(search.toLowerCase())) {
                 return true;
             } else if (search == "") {
-                return alert1()
+                return alert1();
             } else if (!isNaN(search)) {
-                return alert6()
+                return alert6();
             }
         }
-    })
+    });
     matchTable(resultFilter)
+}
+
+
+// *****Filtramos la tabla para buscar proxima jornada*****//
+
+function filtrarLastTime(lastTime) {
+    let arrayFinished = []
+    let arrayLastTime = lastTime.filter(x => {
+        if (x.status == "IN_PLAY") {
+            return true
+        } else if (x.status == "SCHEDULED") {
+            return true
+        } else if (x.status == "FINISHED") {
+            arrayFinished.push(x)
+        }
+    })
+
+    let proximosPartidos = arrayLastTime.slice(0, 10)
+    proximaJornada(proximosPartidos)
+
+    function proximaJornada(varios) {
+        for (let i = 0; i < proximosPartidos.length; i++) {
+            if (proximosPartidos[i].matchday != proximosPartidos[0].matchday) {
+                varios.splice(i, 1);
+                i = i - 1
+            }
+        }
+        for (let j = 0; j < arrayFinished.length; j++) {
+            if (arrayFinished[j].matchday != proximosPartidos[0].matchday) {
+                arrayFinished.splice(j, 1);
+                j = j - 1
+            }
+            // console.log(arrayFinished)
+        }
+    }
+    let nuevaProximosPartidos = [].concat(arrayFinished, proximosPartidos)
+    // console.log(nuevaProximosPartidos)
+    matchTable(nuevaProximosPartidos)
 }
 
 
@@ -478,3 +563,47 @@ function quitarAlert7() {
     let alert7 = document.getElementById("alert7");
     alert7.style.display = "none"
 }
+
+function alert8() {
+    let alert8 = document.getElementById("alert8");
+    alert8.style.display = "block"
+}
+
+function quitarAlert8() {
+    let alert8 = document.getElementById("alert8");
+    alert8.style.display = "none"
+}
+
+function alert9() {
+    let alert9 = document.getElementById("alert9");
+    alert9.style.display = "block"
+}
+
+function quitarAlert9() {
+    let alert9 = document.getElementById("alert9");
+    alert9.style.display = "none"
+}
+
+
+
+
+
+
+// console.log(arrayLastTime)
+
+
+
+// matchTable(arrayLastTime)
+// if (match[i].status == "IN_PLAY") {
+//     status.innerHTML = "En Juego"
+// } else if (match[i].status == "FINISHED") {
+//     status.innerHTML = "Finalizado"
+// } else if (match[i].status == "SCHEDULED") {
+//     status.innerHTML = "Sin Jugar"
+// } else if (match[i].status == "POSTPONED") {
+//     status.innerHTML = "Aplazado"
+
+//     // "status": "FINISHED",
+//     // "status": "IN_PLAY",
+//     // "status": "SCHEDULED",
+//     // "status": "POSTPONED",

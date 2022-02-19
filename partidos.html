@@ -94,6 +94,15 @@
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                                 <div class="resultados btn-group-vertical ms-1 mb-1 col-auto">
+
+                                    <!-- <input class="btn" type="radio" name="radioList" value="Proxima" id="rad1"
+                                        autocomplete="off"> -->
+                                    <button class="dropdown-item"  name="radioList" type="button" id="rad0" value="Proxima" autocomplete="off">Proxima
+                                        Jornada</button>
+                                    <!-- <label class="btn btn-light" for="rad1">
+                                        Proxima Jornada
+                                    </label> -->
+
                                     <input class="btn-check" type="radio" name="radioList" value="Ganados" id="rad1"
                                         autocomplete="off">
                                     <label class="btn btn-light" for="rad1">
@@ -112,27 +121,33 @@
                                         Perdidos
                                     </label>
 
-                                    <input class="btn-check" type="radio" name="radioList" value="Suspendidos" id="rad4"
+                                    <input class="btn-check" type="radio" name="radioList" value="in_play" id="rad4"
                                         autocomplete="off">
                                     <label class="btn btn-light" for="rad4">
+                                        En Juego
+                                    </label>
+
+                                    <input class="btn-check" type="radio" name="radioList" value="Suspendidos" id="rad5"
+                                        autocomplete="off">
+                                    <label class="btn btn-light" for="rad5">
                                         Suspendidos
                                     </label>
 
-                                    <input class="btn-check" type="radio" name="radioList" value="Proximos" id="rad5"
+                                    <input class="btn-check" type="radio" name="radioList" value="Proximos" id="rad6"
                                         autocomplete="off">
-                                    <label class="btn btn-light" for="rad5">
+                                    <label class="btn btn-light" for="rad6">
                                         Proximos
                                     </label>
 
-                                    <input class="btn-check" type="radio" name="radioList" value="Local" id="rad6"
+                                    <input class="btn-check" type="radio" name="radioList" value="Local" id="rad7"
                                         autocomplete="off">
-                                    <label class="btn btn-light" for="rad6">
+                                    <label class="btn btn-light" for="rad7">
                                         Local
                                     </label>
 
-                                    <input class="btn-check" type="radio" name="radioList" value="Visitante" id="rad7"
+                                    <input class="btn-check" type="radio" name="radioList" value="Visitante" id="rad8"
                                         autocomplete="off">
-                                    <label class="btn btn-light" for="rad7">
+                                    <label class="btn btn-light" for="rad8">
                                         Visitante
                                     </label>
 
@@ -200,6 +215,12 @@
                                 </div>
                                 <div class="alert alert-primary col-auto" role="alert" id="alert7">
                                     AVISO!!! EL DATO INTRODUCIDO NO ES NUMÉRICO. INTRODUCE UN NUMERO DE JORNADA VÁLIDO
+                                </div>
+                                <div class="alert alert-primary col-auto" role="alert" id="alert8">
+                                    AVISO!!! NO HAY ACTUALMENTE NINGÚN PARTIDO EN JUEGO.
+                                </div>
+                                <div class="alert alert-primary col-auto" role="alert" id="alert9">
+                                    AVISO!!! NO HAY ACTUALMENTE NINGÚN PARTIDO SUSPENDIDO.
                                 </div>
                             </div>
                         </tbody>
