@@ -7,10 +7,10 @@ quitarAlert6();
 quitarAlert7();
 quitarAlert8();
 quitarAlert9();
-
+const corsAnywhere = 'https://cors-anywhere.herokuapp.com/';
 function getFetch(url) {
 
-    fetch(url, {
+    fetch(corsAnywhere + url, {
         method: "GET",
         headers: {
             "X-Auth-Token": "b2df88f43d1f418aaf653f463db0faf1"
