@@ -12,11 +12,11 @@ function getFetch(url) {
             return response.json()
         }
     }).then(data => {
-       
+
         let datos = data.standings[0].table
         console.log(datos)
         // ¡¡¡¡¡*****AQUI INSERTAMOS TODOS LOS BOTONES SI LOS TUVIESEMOS *****!!!!! //
-        
+
         // *****QUITAMOS EL SPINNER***** //
         spinnerOut()
         // ¡¡¡¡¡*****AHORA LLAMAMOS A LAS FUNCIONES*****!!!!! //
@@ -31,7 +31,7 @@ function getFetch(url) {
     })
 }
 // EJECUTAMOS LA FUNCION*****//
-getFetch("https://api.football-data.org/v2/competitions/2014/standings")
+getFetch("https://api.football-data.org/v4/competitions/2014/standings")
 document.getElementById("imgLiga").innerHTML = '<img src="https://assets.laliga.com/assets/public/logospage/laliga-h-16-9.jpg">';
 document.getElementById("textLiga").innerHTML = '<P>LA LIGA</p>';
 
