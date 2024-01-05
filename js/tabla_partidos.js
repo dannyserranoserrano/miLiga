@@ -25,7 +25,7 @@ function getFetch(url) {
         // ¡¡¡¡¡*****AQUI INSERTAMOS TODOS LOS BOTONES, Y TRAS ELLOS LAS LLAMADAS*****!!!!! //
 
 
-       // *****Activamos la funcion al pulsar el boton Proxima Jornada*****//
+        // *****Activamos la funcion al pulsar el boton Proxima Jornada*****//
         let boton3 = document.getElementById("rad0")
         boton3.addEventListener("click", () => {
             quitarAlert1();
@@ -54,7 +54,7 @@ function getFetch(url) {
             quitarAlert8();
             quitarAlert9();
             filtrarEquipos(matches)
-            
+
         })
 
         // *****Activamos la funcion de filtrado por jornada al pulsar el boton de Jornada*****//
@@ -70,7 +70,7 @@ function getFetch(url) {
             quitarAlert8();
             quitarAlert9();
             filtrarJornada(matches)
-            
+
         })
 
         // *****Borramos la tabla existente al clicar en el input Text*****//
@@ -110,16 +110,16 @@ function getFetch(url) {
         // console.log(matches)
 
         // *****SI HAY UN ERROR AL CARGAR LA PÁGINA LO AVISAMOS***** //
-        }).catch(error => {
-            // alert("Ha ocurrido un error")
-            console.log("Alerta Fallo al cargar");
-            alert5()
+    }).catch(error => {
+        // alert("Ha ocurrido un error")
+        console.log("Alerta Fallo al cargar");
+        alert5()
     })
 }
 
 // EJECUTAMOS LA FUNCION*****//
 
-getFetch("https://api.football-data.org/v2/competitions/2014/matches")
+getFetch("https://api.football-data.org/v4/competitions/2014/matches")
 document.getElementById("imgLiga").innerHTML = '<img src="https://assets.laliga.com/assets/public/logospage/laliga-h-16-9.jpg">';
 document.getElementById("textLiga").innerHTML = '<P>LA LIGA</p>';
 
@@ -127,7 +127,7 @@ document.getElementById("textLiga").innerHTML = '<P>LA LIGA</p>';
 // *****CREAMOS LAS DIFERENTES LIGAS***** //
 let laLiga = document.getElementById("laLiga");
 laLiga.addEventListener("click", () => {
-    const url = "https://api.football-data.org/v2/competitions/2014/matches"
+    const url = "https://api.football-data.org/v4/competitions/2014/matches"
     getFetch(url)
     document.getElementById("imgLiga").innerHTML = '<img src="https://assets.laliga.com/assets/public/logospage/laliga-h-16-9.jpg">';
     document.getElementById("textLiga").innerHTML = '<P>LA LIGA</p>';
@@ -135,7 +135,7 @@ laLiga.addEventListener("click", () => {
 
 let premiereLeague = document.getElementById("premiereLeague");
 premiereLeague.addEventListener("click", () => {
-    const url = "https://api.football-data.org/v2/competitions/2021/matches"
+    const url = "https://api.football-data.org/v4/competitions/2021/matches"
     getFetch(url)
     document.getElementById("imgLiga").innerHTML = '<img src="https://i.pinimg.com/originals/ec/ef/1f/ecef1f081ae343f74cdc3570bdf9a432.jpg">';
     document.getElementById("textLiga").innerHTML = '<P>PREMIERE LIGUE</p>';
@@ -143,7 +143,7 @@ premiereLeague.addEventListener("click", () => {
 
 let bundesliga = document.getElementById("bundesliga");
 bundesliga.addEventListener("click", () => {
-    const url = "https://api.football-data.org/v2/competitions/2002/matches"
+    const url = "https://api.football-data.org/v4/competitions/2002/matches"
     getFetch(url)
     document.getElementById("imgLiga").innerHTML = '<img src="https://i0.wp.com/elpoderdelasideas.com/wp-content/uploads/bundesliga-detalles.png?w=329&h=329&crop=1&ssl=1">';
     document.getElementById("textLiga").innerHTML = '<P>BUNDESLIGA</p>';
@@ -151,7 +151,7 @@ bundesliga.addEventListener("click", () => {
 
 let ligue_1 = document.getElementById("ligue_1");
 ligue_1.addEventListener("click", () => {
-    const url = "https://api.football-data.org/v2/competitions/2015/matches"
+    const url = "https://api.football-data.org/v4/competitions/2015/matches"
     getFetch(url)
     document.getElementById("imgLiga").innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Ligue1_Uber_Eats_logo.png">';
     document.getElementById("textLiga").innerHTML = '<P>LIGUE 1</p>';
@@ -159,7 +159,7 @@ ligue_1.addEventListener("click", () => {
 
 let serieA = document.getElementById("serieA");
 serieA.addEventListener("click", () => {
-    const url = "https://api.football-data.org/v2/competitions/2019/matches"
+    const url = "https://api.football-data.org/v4/competitions/2019/matches"
     getFetch(url)
     document.getElementById("imgLiga").innerHTML = '<img src="https://www.soyfutbol.com/__export/1563281742077/sites/debate/img/2019/07/16/serie_a_italia.jpg_423682103.jpg">';
     document.getElementById("textLiga").innerHTML = '<P>SERIE A</p>';
@@ -168,7 +168,7 @@ serieA.addEventListener("click", () => {
 
 let primeiraLiga = document.getElementById("primeiraLiga");
 primeiraLiga.addEventListener("click", () => {
-    const url = "https://api.football-data.org/v2/competitions/2017/matches"
+    const url = "https://api.football-data.org/v4/competitions/2017/matches"
     getFetch(url)
     document.getElementById("imgLiga").innerHTML = '<img src="https://img.vavel.com/liga-portugal-34695-6566660893.jpg">';
     document.getElementById("textLiga").innerHTML = '<P>PRIMEIRA LIGA</p>';
@@ -176,7 +176,7 @@ primeiraLiga.addEventListener("click", () => {
 
 let eredivisie = document.getElementById("eredivisie");
 eredivisie.addEventListener("click", () => {
-    const url = "https://api.football-data.org/v2/competitions/2003/matches"
+    const url = "https://api.football-data.org/v4/competitions/2003/matches"
     getFetch(url)
     document.getElementById("imgLiga").innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eredivisie_nieuw_logo_2017-.svg/375px-Eredivisie_nieuw_logo_2017-.svg.png">';
     document.getElementById("textLiga").innerHTML = '<P>EREDIVISIE</p>';

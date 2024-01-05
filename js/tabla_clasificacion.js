@@ -104,7 +104,7 @@ function getFetch(url) {
     })
 }
 // EJECUTAMOS LA FUNCION*****//
-getFetch("https://api.football-data.org/v2/competitions/2021/standings")
+getFetch("https://api.football-data.org/v4/competitions/2021/standings")
 document.getElementById("imgLiga").innerHTML = '<img src="https://i.pinimg.com/originals/ec/ef/1f/ecef1f081ae343f74cdc3570bdf9a432.jpg">';
 document.getElementById("textLiga").innerHTML = '<P>PREMIERE LIGUE</p>';
 
@@ -112,7 +112,7 @@ document.getElementById("textLiga").innerHTML = '<P>PREMIERE LIGUE</p>';
 
 let premiereLeague = document.getElementById("premiereLeague");
 premiereLeague.addEventListener("click", () => {
-    const url = "https://api.football-data.org/v2/competitions/2021/standings"
+    const url = "https://api.football-data.org/v4/competitions/2021/standings"
     getFetch(url)
     document.getElementById("imgLiga").innerHTML = '<img src="https://i.pinimg.com/originals/ec/ef/1f/ecef1f081ae343f74cdc3570bdf9a432.jpg">';
     document.getElementById("textLiga").innerHTML = '<P>PREMIERE LIGUE</p>';
@@ -120,7 +120,7 @@ premiereLeague.addEventListener("click", () => {
 
 let bundesliga = document.getElementById("bundesliga");
 bundesliga.addEventListener("click", () => {
-    const url = "https://api.football-data.org/v2/competitions/2002/standings"
+    const url = "https://api.football-data.org/v4/competitions/2002/standings"
     getFetch(url)
     document.getElementById("imgLiga").innerHTML = '<img src="https://i0.wp.com/elpoderdelasideas.com/wp-content/uploads/bundesliga-detalles.png?w=329&h=329&crop=1&ssl=1">';
     document.getElementById("textLiga").innerHTML = '<P>BUNDESLIGA</p>';
@@ -128,7 +128,7 @@ bundesliga.addEventListener("click", () => {
 
 let ligue_1 = document.getElementById("ligue_1");
 ligue_1.addEventListener("click", () => {
-    const url = "https://api.football-data.org/v2/competitions/2015/standings"
+    const url = "https://api.football-data.org/v4/competitions/2015/standings"
     getFetch(url)
     document.getElementById("imgLiga").innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Ligue1_Uber_Eats_logo.png">';
     document.getElementById("textLiga").innerHTML = '<P>LIGUE 1</p>';
@@ -136,7 +136,7 @@ ligue_1.addEventListener("click", () => {
 
 let serieA = document.getElementById("serieA");
 serieA.addEventListener("click", () => {
-    const url = "https://api.football-data.org/v2/competitions/2019/standings"
+    const url = "https://api.football-data.org/v4/competitions/2019/standings"
     getFetch(url)
     document.getElementById("imgLiga").innerHTML = '<img src="https://www.soyfutbol.com/__export/1563281742077/sites/debate/img/2019/07/16/serie_a_italia.jpg_423682103.jpg">';
     document.getElementById("textLiga").innerHTML = '<P>SERIE A</p>';
@@ -145,7 +145,7 @@ serieA.addEventListener("click", () => {
 
 let primeiraLiga = document.getElementById("primeiraLiga");
 primeiraLiga.addEventListener("click", () => {
-    const url = "https://api.football-data.org/v2/competitions/2017/standings"
+    const url = "https://api.football-data.org/v4/competitions/2017/standings"
     getFetch(url)
     document.getElementById("imgLiga").innerHTML = '<img src="https://img.vavel.com/liga-portugal-34695-6566660893.jpg">';
     document.getElementById("textLiga").innerHTML = '<P>PRIMEIRA LIGA</p>';
@@ -153,7 +153,7 @@ primeiraLiga.addEventListener("click", () => {
 
 let eredivisie = document.getElementById("eredivisie");
 eredivisie.addEventListener("click", () => {
-    const url = "https://api.football-data.org/v2/competitions/2003/standings"
+    const url = "https://api.football-data.org/v4/competitions/2003/standings"
     getFetch(url)
     document.getElementById("imgLiga").innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eredivisie_nieuw_logo_2017-.svg/375px-Eredivisie_nieuw_logo_2017-.svg.png">';
     document.getElementById("textLiga").innerHTML = '<P>EREDIVISIE</p>';
@@ -235,14 +235,14 @@ function filtrarEquipos(clasificacion) {
     let search = document.getElementById("search").value
     if (search == "") {
         alert1(),
-        standingsTable(clasificacion)
-        
+            standingsTable(clasificacion)
+
     }
-        
+
     if (!isNaN(search)) {
         alert6(),
-        standingsTable(clasificacion)
-      }
+            standingsTable(clasificacion)
+    }
 
     // *****Creamos un array en base a la comparativa entre lo introducido y lo buscado*****//
 
@@ -256,7 +256,7 @@ function filtrarEquipos(clasificacion) {
 
     if (arrayStandings.length === 0) {
         alert3(),
-        standingsTable(clasificacion)
+            standingsTable(clasificacion)
     }
     standingsTable(arrayStandings)
 }
@@ -278,7 +278,7 @@ function filtrarClasificacion(clasificacion) {
 
     if (isNaN(search)) {
         alert7(),
-        standingsTable(clasificacion)
+            standingsTable(clasificacion)
     }
 
     // *****Creamos un array en base a la comparativa entre lo introducido y lo buscado*****//
@@ -293,7 +293,7 @@ function filtrarClasificacion(clasificacion) {
 
     if (arrayPosition.length === 0) {
         alert4(),
-        standingsTable(clasificacion)
+            standingsTable(clasificacion)
     }
     standingsTable(arrayPosition);
 }
